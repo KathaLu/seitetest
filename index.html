@@ -730,15 +730,36 @@ Idee: Wörter, die häufig im Dokument vorkommen, haben eine latent ähnliche Be
 
 Meine Erfahrungen mit dem Kurs Fundamentale Ideen der Informatik waren eher negativ, da meine Kohorte den Kurs aufgrund von Ausfällen nur sehr selten besuchen konnte. Außerdem haben wir auch kein Folien von Herrn Beer zur Verfügung gestellt bekommen, weshalb ich mit den Materialien von Herrn Libbrecht gearbeitet habe. Aufgrund von einer sprachlichen Barriere fiel es mir sehr schwer etwas zu verstehen, weshalb ich mich oft auf eigene Recherchen bezogen habe. Dadurch konnte ich das E-Portfolio dann aber vervollständigen und nachvollziehen.     
       
-      
-      
       <h1 class="Schwerpunkte">Schwerpunkte</h1>
       <p class="Schwerpunkte">Unter diesem Reiter finden Sie meine beiden Schwerpunkte zu den Vorlesungen „Programmieren in einer objektorientierten Umgebung“ und „Fundamentale Ideen der Informatik„. Viel Spaß beim Durchstöbern! 🙂</p>
       
       <h2 class="Programmieren in einer objektorientierten Umgebung – Schwerpunkt">Programmieren in einer objektorientierten Umgebung – Schwerpunkt</h2> 
-    <p class="Programmieren in einer objektorientierten Umgebung – Schwerpunkt">EINFÜHRUNG <br>
+      <p class="Programmieren in einer objektorientierten Umgebung – Schwerpunkt"> <b>HERO TROUBLE</b> <br><br>
+          <b> EINFÜHRUNG</b> <br>
 Ich habe zusammen mit meiner Gruppe, mit Sophia Pournaras, Stefan Maisch und Tim Reisenauer, das Spiel “Hero Trouble” entwickelt. Unser Spiel basiert auf dem bereits vorhandenem Spiel “Tank Trouble” (https://www.tanktrouble.com), in dem es darum geht den bzw die gegnerischen Panzer abzuschießen. Dabei befinden sich die einzelnen Panzer an verschiedenen Stellen in einem Labyrinth. Es ist möglich dieses Spiel alleine gegen einen Computer, zu zweit oder zu dritt zu spielen. </p>
-    
+Bei unserem Spiel, “Hero Trouble”, handelt es sich um ein sehr ähnliches Konzept. Es ist als Zwei-Spieler-Spiel konzipiert, und es geht darum, dass Superman (Spieler 1) und Batman (Spieler 2) sich gegenseitig abschießen, bzw sich nicht abschießen lassen. Diese befinden sich auch in einem Labyrinth, welches Hindernisse beziehungsweise Begrenzungen darstellt.<br><br>    
+      <b>KONZEPTION</b><br>
+Nachdem wir uns auf eine Spielidee geeinigt haben, ging es für uns an die Arbeit. Zuerst begaben wir uns auf die Suche nach Spielfiguren. Schnell haben wir die Illustrationen von Batman und Superman (https://img.etsystatic.com/il/c6033d/1347625235/il_fullxfull.1347625235_o26v.jpg) gefunden und uns für diese entschieden. Daraufhin haben wir diese mit Photoshop zurecht geschnitten und uns dem Aufbau des Startfensters und des Labyrinths gewidmet. Diese Aufgaben haben wir aufgeteilt, zwei von uns entwickelten das Labyrinth und die anderen beiden schrieben den ersten Teil des Codes für das Startfenster. Auf den genauen Code werde ich unter dem Punkt “Umsetzung” zurückkommen.
+Um die Koordinaten leichter festlegen zu können, haben wir das Labyrinth direkt in einem Koordinatensystem gezeichnet. Die obere, linke Ecke lag dabei nicht im Nullpunkt, sondern bei (100/100). Nachdem wir die äußeren Linien festgelegt haben, haben wir nach und nach die im Labyrinth liegenden Linien definiert.<br>
+Dies bringt mich auch schon in die Phase der Umsetzung. <br> <br>
+
+      <b>UMSETZUNG </b><br>
+In dem Programmcode, den ich Ihnen in einer Dropbox zur Verfügung gestellt habe, steht schon sehr detailliert, wozu die einzelnen Elemente dienen, weshalb ich hier nur auf besondere Teile des Spielcodes eingehen werde.     
+Nach dem Programmkopf, in welchem wir allgemeine Daten, wie den Spielnamen festgelegt haben, haben wir dargestellt, dass wir eine externe Datei einbinden möchten. (Auf diese Datei werde ich später noch einmal zurückkommen).
+Als nächstes haben wir die Shoes App mit “Shoes.app do” gestartet und den Titel des Spiels und die nicht veränderbare Größe des Fensters bestimmt.
+Zunächst haben wir grundlegende Dinge für das Start- und Steuerungsfenster eingestellt. WIrd nun der Button “Play” betätigt, beginnt der Hauptteil des Programmcodes.
+Als erstes werden die Linien des Labyrinths, von denen ich vorher schon einmal gesprochen habe, aufgerufen.   
+Nun werden “Ovale”, die die Schusspatronen der Spieler darstellen, einmal festgelegt, damit sie beim ersten “remove” Befehl, entfernt werden. Dies dient dazu, dass wenn die Spieler später schießen möchten, die davor abgeschossene Schusspatrone entfernt (also removed) wird, sobald die nächste abgefeuert wurde.
+Damit die Schüsse später auch funktionieren, werden Sie nun in zwei Funktionen, eine für jeden Spieler, definiert. Innerhalb der Funktionen sind einige Kontrollstrukturen in einander verschachtelt, um jede mögliche Bedingung zu erfüllen. Ebenfalls wird hier definiert, dass Spieler 1 mit der Taste “Q” und Spieler 2 mit der Taste “M” schießt.      
+Danach, haben wir die Startpositionen und die Steuerung der beiden Spielfiguren festgelegt. Auch hier findet man eine Verkettung von mehreren Fallentscheidungen wieder.
+Mit einem keypress-Event, werden dann die zuvor festgelegten Kontrollstrukturen, welche, bzw ob eine Taste aufgerufen wird, überprüft.      
+Als letztes wird die zuvor genannte, ausgelagerte Funktion noch aufgerufen. In dieser Funktion, haben wir festgelegt, dass wenn Spieler 1 oder Spieler 2, die Linien des Labyrinths berühren, sie diese nicht durchdringen können und begrenzt werden. Außerdem werden sie immer wenn sie eine Linie berührt haben, ein Stück weiter in die Mitte des davor genutzten Weges gesetzt.
+Die Funktion haben wir deshalb ausgelagert, da sie sehr lang und daher unübersichtlich und unstrukturiert wirkt.  <br><br>    
+ 
+      <b>FAZIT</b><br><br>
+Zusammenfassend kann ich sagen, dass mir das Programmieren des Spiels mehr Freude als erwartet bereitet hat, da ich vor dieser Vorlesung noch nie in Kontakt mit irgendeiner Art von Programmieren gekommen bin.
+Es war stets interessant und für mich persönlich auch sehr verlockend, wenn etwas mal nicht funktioniert hat und wir nach der Lösung suchen mussten, damit alles perfekt läuft.
+Es hat mir sehr viel Freude bereitet dieses Spiel zu programmieren, und bin sehr stolz sagen zu können, dass dies unser Werk ist!
       
       <h2 class="Fundamentale Ideen der Informatik – Schwerpunkt">Fundamentale Ideen der Informatik – Schwerpunkt</h2>
       <p class="Fundamentale Ideen der Informatik – Schwerpunkt">EINFÜHRUNG VERSCHLÜSSELUNG: <br>
