@@ -762,13 +762,13 @@ Es war stets interessant und für mich persönlich auch sehr verlockend, wenn et
 Es hat mir sehr viel Freude bereitet dieses Spiel zu programmieren, und bin sehr stolz sagen zu können, dass dies unser Werk ist!
       
       <h2 class="Fundamentale Ideen der Informatik – Schwerpunkt">Fundamentale Ideen der Informatik – Schwerpunkt</h2>
-      <p class="Fundamentale Ideen der Informatik – Schwerpunkt"> VERSCHLÜSSELUNG – <b>ADVANCED ENCRYPTION STANDARD </b><br><br>
+      <p class="Fundamentale Ideen der Informatik – Schwerpunkt"> <b>VERSCHLÜSSELUNG – ADVANCED ENCRYPTION STANDARD </b><br><br>
           
 <b> EINFÜHRUNG VERSCHLÜSSELUNG: </b><br> <br>
 
 Unter Verschlüsselung versteht man Verfahren und Algorithmen, die Daten mittels digitaler bzw. elektronischer Codes oder Schlüssel inhaltlich in eine nicht lesbare Form umwandeln. Diesen Vorgang bezeichnet man als Verschlüsseln. Gleichzeitig wird dafür gesorgt, dass nur mit dem Wissen eines Schlüssels die geheimen Daten wieder entschlüsselt werden können.
 Anstatt von Verschlüsselung spricht man auch von Chiffrierung, was das gleiche meint.<br><br>
-          <b>EINFÜHRUNG ADVANCED ENCRYPTION STANDARD:</b>br>
+          <b>EINFÜHRUNG ADVANCED ENCRYPTION STANDARD:</b><br>
 
 Der Advanced Encryption Standard (AES) ist eine Blockchiffre, die als Nachfolger für DES im Oktober 2000 vom National Institute of Standards and Technology (NIST) als Standard bekanntgegeben wurde. Nach seinen Entwicklern Joan Daemen und Vincent Rijmen wird AES auch Rijndael-Algorithmus genannt.
 Es handelt sich um ein symmetrisches Verschlüsselungsverfahren. Der Rijndael-Algorithmus besitzt variable, voneinander unabhängige Block- und Schlüssellängen von 128, 160, 192, 224 oder 256 Bit. Außerdem bietet dieser ein sehr hohes Maß an Sicherheit; → erst mehr als zehn Jahre nach seiner Standardisierung wurde der erste theoretisch interessante, praktisch aber nicht relevante Angriff gefunden.<br><br>
@@ -786,7 +786,7 @@ frei von patentrechtlichen Ansprüchen sein und muss von jedermann unentgeltlich
 Neben Joan Daemen und Vincent Rijmen gab es noch Teilnehmer aus vielen weiteren Ländern, die ihre Ideen präsentiert haben. Auch Deutschland wurde durch die Deutsche Telekom mit der „Magenta“ als Idee vertreten. Aufgrund von massiver Sicherheits- und Leistungsprobleme wurde diese dann aber nicht ausgewählt.       
 In Bezug auf die drei Hauptkriterien, Kosten, Implementierung und Sicherheit, entschied sich die NIST (National Institute of Standards and Technology) für das Rijndael Verfahren.<br><br>
 
-          <b>ABLAUF:</b><br>
+          <b>ABLAUF:</b><br><br>
 Rijndael sind Blockchiffren auf Basis eines Substitutions-Permutations-Netzwerks (SPN). Das Verfahren wechselt bei jedem Schritt zwischen Substitution und Permutation, weshalb man AES auch als SP-Chiffre bezeichnet. Dabei erfolgt die Transformation des Klartextes in mehreren Runden gleichen Aufbaus. Der Klartext wird dabei nicht als Ganzes, sondern in Blöcken verarbeitet. Hierbei findet eine Konfusion statt, es wird also unter anderem die Beziehung zwischen Klar- und Geheimtext verwischt.
 Die Blocklänge unterscheidet sich zwischen Rijndael und AES etwas, bei Rijndael können die Block- und Schlüssellänge unabhängig voneinander die Werte 128, 160, 192, 224 oder 256 Bits haben. Bei AES wurde die Blocklänge auf 128 Bit und die Schlüsselgröße auf 128 (10 Runden), 192 (12 Runden) und 256 Bit (14 Runden), nach den Anforderungen von der NIST, festgelegt.
 Die AES-Entschlüsselung sieht notwendigerweise vor, dass dieselben Schritte wie bei der Verschlüsselung durchlaufen werden müssen, nur eben in umgekehrter Reihenfolge.
@@ -794,7 +794,7 @@ Jeder Block wird zunächst in eine zweidimensionale Tabelle mit vier Zeilen gesc
  
 Der weitere Ablauf ist dann in folgende Schritte eingeteilt:<br>
 
-Schlüsselexpansion<br>
+Schlüsselexpansion<br><br>
 Vorrunde<br>
 KeyAddition ()<br>
 Verschlüsselungsrunden (wiederhole solange runde<r)<br>
