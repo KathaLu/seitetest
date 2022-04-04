@@ -60,15 +60,12 @@ puts „1 + 2 = #{1+2}“ #=> 1 + 2 = 3
 
 Boolean / Boolsche Werte: …logische Aussage, kann wahr (true), falsch (false) oder leer (nil) sein
 
-In manchen Fällen ist eine Umwandlung der Datentypen notwendig. Ein Beispiel finden Sie in der ersten Übung zu diesem Kapitel. Hierfür gibt es folgende Befehle:<br>
+In manchen Fällen ist eine Umwandlung der Datentypen notwendig. Ein Beispiel finden Sie in der ersten Übung zu diesem Kapitel. Hierfür gibt es folgende Befehle:<br><br>
 
-      <b>UMWANDLUNG DER DATENTYPEN</b> <br><br>
-
-.to_s – Umwandlung zu einem String
-
-.to_i – Umwandlung zu einem Integer
-
-.to_f – Umwandlung zu einem Float <br> <br>
+      <b>UMWANDLUNG DER DATENTYPEN</b> <br>
+      to_s – Umwandlung zu einem String
+      to_i – Umwandlung zu einem Integer
+      .to_f – Umwandlung zu einem Float <br> <br>
 
       <b> VARIABLEN</b> <br>
 
@@ -240,7 +237,110 @@ def assert( expression )
 raise “Fehler!” unless expression
 end<br>
 Der Test gibt eine Fehlermeldung aus, wenn der Ausdruck, für den er durchgeführt wird, nicht wahr ist.<br>
-→ Nun geht es darum, das Programm schrittweise zu entwickeln und zwischendurch immer wieder zu testen.
+→ Nun geht es darum, das Programm schrittweise zu entwickeln und zwischendurch immer wieder zu testen.<br> <br>
+      
+      <b>7. OBJEKTORIENTIERUNG</b><br> <br>
+
+Ruby ist eine objektorientierte Programmiersprache. Dies bedeutet, dass in einem Ruby-Programm Ideen umgesetzt und damit gearbeitet werden kann, wie man es auch im realen Leben tun würde.
+So werden in einem Programm Klassen und Objekte erstellt, für die beliebige Eigenschaften und Beziehungen untereinander definiert werden können. Klassen sind sozusagen Vorlagen aus denen dann konkrete Objekte erzeugt werden. Innerhalb der Klasse können eine Reihe von Eigenschaften und Methoden definiert werden, die auf ein Objekt angewendet werden können.
+Zur Veranschaulichung, hier ein Beispiel:<br>
+→ es wird als erstes die Klasse “Cat” erstellt<br>
+class Cat
+attr_accessor :name, :age, :color
+end
+Der Name einer Klasse beginnt immer mit einem Großbuchstaben.
+atrr_accessor definiert Instanzvariablen, das heißt Variablen, durch die Objekte der Klasse identifiziert werden können.
+→ hier kann eine Instanz der Klasse Cat durch Name, Alter und Farbe identifiziert werden
+→ aus dieser Klasse können nun Objekte erzeugt werden:
+cat_instance = Cat.new
+Für das erzeugt Objekt können im nächsten Schritt Attribute definiert werden:
+cat_instance.name =”Max”
+cat_instance.age = 3
+cat_instance.color = “black”
+→ jetzt erzeuge ich eine neue Klasse Snake:
+class = Snake
+attr_accessor :name, :age, :color
+end
+! ein wichtiges Merkmal objektorientierter Sprachen ist die Vererbung → somit ist es möglich, für die Klassen “Cat” und “Snake” eine Superklasse “Pet” zu erzeugen → “Cat” und “Snake” bilden also die Subklassen von “Pet” und erben damit alle Eigenschaften, die für die Klasse “Pet” zur Verfügung stehen
+→ also wird die Klasse “Pet” zunächst definiert
+class Pet
+attr_accessor :name, :age, :color
+end
+→ jetzt werden die Subklassen definiert, dabei gibt “<Pet” die Vererbung der Klasse Pet an
+→ somit müssen Attribute, die für “Pet” gelten, für “Cat” und “Snake” nicht noch einmal definiert werden
+class Cat < Pet
+end
+class Snake < Pet
+end
+→ es können allerdings aber auch spezifische Eigenschaften für einzelne Klassen hinzugefügt werden
+class Snake < Pet
+attr_accessor :length
+end
+→ außerdem können bestimmte Methoden definiert werden, d. h. Anweisungen, die für Objekte der Klasse verwendet werden können
+class Dog < Pet
+def bark
+puts “Woof!”
+end
+end
+→ wird nun ein neuer Hund erstellt, kann für diesen die Methode “bark” aufgerufen werden
+a_dog = Dog.new
+a_dog.bark
+# => Woof!  <br><br>
+      
+      <b>8. SHOES UND RUBY</b>br>
+
+ Shoes ist ein GUI-Framework für Ruby. GUI steht für „graphical user interface“ und ist eine grafische Benutzeroberfläche, mit denen User in Programmen interagieren können. Framework bedeutet „Gerüst“ und man kann es als Vorprogrammierung verstehen. So sind in Shoes schon Funktionen und Elemente vorhanden und müssen nicht jedes Mal neu programmiert werden. Shoes kann auf verschiedene Weise verwendet und eingebunden werden. Shoes ermöglicht es also, für Ruby Programme eine graphische Benutzeroberfläche zu erstellen. Somit kann der Nutzer einfach mit einem Spiel/einer Webseite oder ähnlichem interagieren.
+Shoes.app do
+…
+…
+end
+bildet das Grundgerüst im Ruby Programm
+→ wird etwas nach dem “end” geschrieben, wird es zwar in Ruby ausgeführt, in Shoes aber nicht<br><br>
+
+      <b>ERSTE SHOES ANWENDUNG</b>br>
+
+→ Textausgaben über puts und print sind nicht mehr möglich, anstatt davon gibt es aber “para”
+→ para = kurz für Paragraph  <br><br>
+      
+      <b>10. FLOWS UND STACKS</b><br>
+
+Flows und Stacks sind Boxen, ähnlich wie “
+und” in HTML.
+Stacks kann man sich wie zusammengebundene Dominosteine vorstellen. Legt man mehr Dominosteine auf einen Stapel, so wird der Stapel einfach höher.
+Ein Flow dagegen ist eher wie eine Streichholzschachtel. Füllt man mehr Streichhölzer hinein quetschen sich die Hölzchen einfach zusammen, damit sie irgendwie in die Schachtel passen. Auch in einer Streichholzschachtel kann der untergeordnete Teil “höher” werden, aber davor ordnen sich die Streichhölzer nebeneinander an.
+→ Das Hauptfenster das mit “Shoes.app” geöffnet wird, ist ein Flow. Man kann auch für Flows und Stacks eine Höhe und Breite festgelegt werden. Ein Beispiel dafür könnte so aussehen:
+Shoes.app do
+stack width: 1.0, height: 1.0
+do
+background blue
+end
+end  <br><br>
+      
+      <b> 11. ZEICHNEN MIT SHOES</b><br><br>
+
+Das Shoes Fenster kann man sich als Koordinatensystem mit einer x- und einer y-Achse vorstellen.
+Dabei stellt die Ecke oben links den Nullpunkt dar.
+Mit dem Befehl “left” wird immer die x-Achse angesprochen. Umso höher der left-Wert umso weiter rechts befindet sich das Element.
+Mit “top” können die Elemente auf der y-Achse verschoben werden. Umso höher der top-Wert, desto tiefer rutscht das Element. <br><br>
+      <b> 12. INTERAKTIONEN MIT DEM NUTZER EINBAUEN</b><br><br>
+
+      <b>BUTTONS</b><br>
+
+Eine der am häufigsten genutzten Interaktionen mit dem Nutzer ist ein Button:
+Shoes.app do
+button “Was macht Shoes?” do
+alert “alles farbig und beweglich”
+end
+end<br>
+→ “button” bedeutet: jetzt kommt ein Button<br>
+→ in den Hochkommata steht, was auf dem Button geschrieben sein soll<br>
+→ was zwischen dem do und dem end steht, ist das was passieren soll, wenn auf den Button geklickt wird<br> <br>
+      <b> 13. FAZIT</b><br><br>
+
+Programmieren war bis zu diesem Semester etwas ganz Unbekanntes für mich. Nie hätte ich gedacht, dass ich auch nur ansatzweise in Berührung damit kommen würde, und es überhaupt kapieren würde. Wo ich jetzt aber am Ende des Kurses angelangt bin, muss ich sagen, dass ich es eigentlich sogar sehr interessant fand. Ich hatte meine Höhen und Tiefen, die Erfolgserlebnisse wenn etwas funktioniert hat, waren immer sehr schön, aber ehrlich gesagt denke ich, dass die Frustration doch sehr hoch war. Oft haben Aufgaben nicht funktioniert, da sie im Ruby Kurs falsch dargestellt wurden, oder weil der Editor im Kurs nicht funktionierte. Dies fand ich echt schade, da ich deshalb oft schnell an mir selber gezweifelt habe, und dem Aufgeben immer sehr Nahe war. Zum Glück habe ich aber eine gewisse Menge an Ehrgeiz in mir, dass ich immer so lange an Aufgaben dran saß, bis ich sie endlich – mit oder ohne Hilfe von anderen – schaffen konnte.
+Das Prinzip vom Flipped Classroom hat mir persönlich nicht so zugesagt, da man, wenn man den Kurs einmal nicht rechtzeitig gemacht hat, nur sehr schwer mitgekommen ist. Dennoch haben mir die Präsenztermine immer etwas gebracht, da auch oft ältere Themen wiederholt wurden.
+Im Großen und Ganzen kann ich sagen, dass ich meine Ruby Programmierfähigkeiten als gut einstufen würde, was für mich persönlich als Neuling, eine tolle Erfahrung ist!
+      
       
       <h2 class="Fundamentale Ideen der Informatik">Fundamentale Ideen der Informatik</h2>
       <p class="Fundamentale Ideen der Informatik">1. FUNDAMENTALE IDEEN UND BEGRIFFSERKLÄRUNG <br>
