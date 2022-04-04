@@ -20,13 +20,13 @@ Ruby ist außerdem eine objektorientierte Sprache, was heißt, dass jeder Wert e
       <b> WARUM RUBY?</b> <br>
 Ruby ist eine freie Programmiersprache, das heißt also, dass diese kostenlos, frei zu benutzen, zu kopieren, zu verändern und zu verbreiten ist. Außerdem bietet Ruby einen guten Einstieg in die Programmierung, da es relativ einfach zu lernen ist. Die Befehle können dazu auch besser verstanden werden, da sie an der englischen Sprache orientiert sein. Dazu unterstützt Ruby die neuesten, wichtigen Programmiermethodiken: Objektorientierung, XP, und auch mehrere Programmierparadigmen. Ein weiterer sehr wichtiger Aspekt ist, dass Ruby der menschlichen Denkweise sehr ähnelt. <br> <br>
 <b> EXKURS </b> <br> <br>
-<b> ASSEMBLER </b> <br>
+ ASSEMBLER<br>
 → für den Menschen lesbare Sprache <br>
 → Umwandlung in Maschinensprache notwendig <br>
 → zu umständlich und fehleranfällig <br> <br>
-      <b>COMPILER</b> <br>
+      COMPILER<br>
 → übersetzt das in Hochsprache formulierte Programm in Maschinensprache, das dann ausgeführt werden kann <br> <br>
-      <b>INTERPRETER</b> <br>
+      INTERPRETER <br>
 → analysiert das in Hochsprache formulierte Programm und aktiviert direkt die entsprechenden Maschinenbefehle <br> <br>
       <b>ALGORITHMEN UND PROGRAMME</b> <br>
 Algorithmen sind genau definierte Handlungsvorschriften die zur Lösung eines Problems dienen. Ein dafür alltägliches Beispiel sind Kochrezepte, in welchem beschrieben wird, in welcher Reihenfolge Schritte zu erledigen sind.
@@ -36,9 +36,215 @@ Programme sind konkrete Formen von Algorithmen. Diese bestehen aus mehreren Anwe
 puts – es erfolgt eine Ausgabe mit Zeilenumbruch <br>
 print – es erfolgt eine Ausgabe ohne Zeilenumbruch <br>
 Raute (#) – hierbei handelt es sich um einen Kommentar; die Raute und alles das in der Zeile danach steht wird vom Ruby-Interpreter ignoriert <br>
-#=> – eine Raute mit einem darauffolgenden Pfeil zeigt an, welcher Wert bei dem Code herauskommen würde, wenn man ihn ausführen würde <br>
+#=> – eine Raute mit einem darauffolgenden Pfeil zeigt an, welcher Wert bei dem Code herauskommen würde, wenn man ihn ausführen würde <br> <br>
+      <b>2. DATENTYPEN UND VARIABLEN </b> <br>
 
+      <b> DATENTYPEN </b> <br>
+Daten, ihre Ausführung und Manipulation bilden die Basis von Computerprogrammen. In Ruby sind folgende, einfache und komplexe Datentypen vordefiniert: <br>
 
+      <b>EINFACHE DATENTYPEN</b> <br>
+
+Zahlen: …werden in Ruby meist wie im realen Leben eingesetzt; zum Rechnen, als Index, etc. Unterschieden wird zwischen ganzzahligen Werten (Integer wie 1; -1; 1000) und Fließkommazahlen (Float wie 1.2; 3.06; -6.66) <br>
+
+Zeichen: …ist ein einzelner Buchstabe, Ziffer, Leerzeichen oder sonstiges typografisches Symbol. <br>
+
+Zeichenketten (String): …eine Kette von Zeichen (Buchstaben, Zahlen etc.) umschlossen von einfachen oder doppelten Anführungszeichen <br>
+
+String-Interpolation – Besonderheit:Strings in doppelten Anführungszeichen können beliebige Ruby-Ausdrücke beinhalten. 
+
+Wenn der String erzeugt wird, wird der Ausdruck ausgewertet, in einen String konvertiert und anstelle des Ausdrucks selbst in die Zeichenkette eingefügt.
+
+Ausdrücke innerhalb eines Strings beginnen mit dem Raute-Zeichen (#) und werden von geschweiften Klammern ({ }) umschlossen:
+
+puts „1 + 2 = #{1+2}“ #=> 1 + 2 = 3
+
+Boolean / Boolsche Werte: …logische Aussage, kann wahr (true), falsch (false) oder leer (nil) sein
+
+In manchen Fällen ist eine Umwandlung der Datentypen notwendig. Ein Beispiel finden Sie in der ersten Übung zu diesem Kapitel. Hierfür gibt es folgende Befehle:
+
+      <b>UMWANDLUNG DER DATENTYPEN</b> <br>
+
+.to_s – Umwandlung zu einem String
+
+.to_i – Umwandlung zu einem Integer
+
+.to_f – Umwandlung zu einem Float <br> <br>
+
+      <b>ÜBUNG</b> <br>
+
+Wiederhole nun deine Eingabe und wandle dein Alter (bisher Datentyp Integer) in einen String um. <br> <br>
+
+      <b> VARIABLEN</b> <br>
+
+Variablen haben in Programmiersprachen eine wichtige Rolle. Sie erleichtern einem das Nutzen und Schreiben von Programmen. Wird einer Variable einmal ein Wert zugeordnet, kann dieser beliebig oft genutzt und aufgerufen werden.
+Variablen kann man sich wie ein Gefäß vorstellen, in dem ein Wert hinterlegt wird. Variablen können anhand von beliebigen Datentypen hinterlegt werden. Egal ob String, Boolean, oder einfach nur eine Zahl.
+Es wird weiter unterschieden zwischen lokalen und globalen Variablen.
+Lokale Variablen werden entweder durch einen Unterstrich oder einen Kleinbuchstaben zu Beginn der Variable gekennzeichnet. Sie gelten für die Methode, für die sie definiert werden. Wenn aber eine Methode bereits eine Variable verwendet, greift sie auf diese zurück, und erstellt keine neue.
+Globale Variablen werden mit einem $ gekennzeichnet. Diese sind immer und überall im Ruby Programm sichtbar. Es gibt auch globale Variablen, die keinen zugewiesenen Wert haben, besitzen dann automatisch den Wert nil. <br> <br>
+      <b> LITERALE UND AUSDRÜCKE</b> <br>
+
+      <b>LITERALE</b> <br>
+
+Um bestimmte Ausdrücke zu erzeugen, gibt es eine Art Kurzsyntax, die Literale. Einfach ausgedrückt sind Literale Abfolgen von Ziffern und Zahlen.
+‘ein String Literal’
+      <b>AUSDRÜCKE</b><br>
+Ein Ausdruck ist ein Stück Code, der vom Ruby-Interpreter ausgewertet wird, um einen Wert zu erzeugen. Primärausdrücke sind die einfachsten möglichen Ausdrücke, die nicht aus einfacheren Ausdrücken zusammengesetzt sind. Dazu gehören Literale, Referenzen auf Variablen und Aufrufe von Methoden.
+Es können ebenfalls größere Ausdrücke erzeugt werden. Dies erfolgt indem man Primärausdrücke durch Operatoren kombiniert werden.
+      <b>3. ANWEISUNGEN UND FUNKTIONEN</b><br>
+
+      <b>OPERATOREN</b> <br>
+
+Ein Ausdruck wird üblicherweise aus Werten und Operatoren gebildet. Hierbei gibt es unter anderem die arithmetischen Operatoren, Zuweisungsoperatoren oder logischen Operatoren.<br> <br>
+      <b> FUNKTIONEN</b><br>
+Funktionen sind Codeblöcke, die einmal definiert werden und auf die dann beliebig oft zurückgegriffen werden kann. So lässt sich ein Programm besser strukturieren und der Code kompakt halten.
+Die zwei Schlüsselwörter für Definitionen sind def und end. Man beginnt mit “def”, woraufhin der Funktionsname und optionale ein oder mehrere Parameter in Klammern folgen.
+Im Funktionsrumpf befindet sich der Ruby-Code, der bei Aufruf der Funktion ausgeführt wird. Die Parameter werden hier wie normale Variablen verwendet. Das Ende wird dann mit “end” gekennzeichnet.
+Allgemein formuliert sieht dies dann so aus:
+def name (parameter)
+Funktionsrumpf
+…
+…
+end <br> <br>
+      <b>4. KONTROLLSTRUKTUREN</b> <br>
+
+Kontrollstrukturen dienen dazu den geradlinigen Programmfluss zu unterbrechen und an anderen Stellen zu verzweigen. Dies geschieht in Form von Fallentscheidungen oder Schleifen.<br>
+
+      <b>FALLENTSCHEIDUNGEN</b><br>
+
+Das wichtige bei Fallentscheidungen ist, dass sie immer mindestens eine, oder mehrere Bedingungen enthalten. Je nach dem ob die Bedingung erfüllt ist, oder nicht, wird ein bestimmtes Stück Code ausgeführt.<br>
+
+→ Es handelt sich hierbei also um Bool’sche Ausdrücke. Anweisungen werden dann ausgeführt, je nach dem, ob eine Bedingung true oder false ist.<br><br>
+
+      <b>SCHLEIFEN</b><br>
+Schleifen bewirken, dass ein Code-Stück wiederholt und somit mehrmals ausgeführt wird.<br><br>
+      
+      <b>  ITERATOREN</b> <br>
+
+Eine Alternative Wiederholungen zu erzeugen, wird durch Iteratoren geboten. Ein Iterator schreitet durch eine Liste von Elementen und arbeitet diese Element für Element ab. Unter anderem gibt es die numerischen Iteratoren times, upto und downto.
+Die Methode times ruft ihren zugehörigen Codeblock genau n-mal auf. (Sie geht also durch eine Liste aufeinanderfolgender Zahlen mit n Elementen beginnend bei 0. Dies kann so aussehen:
+3.times do
+print “haha!”
+end
+# => haha!haha!haha!
+Wird die Methode durch einen formalen Parameter erweitert, so zeigt dieser den Wert der aktuellen Iteration an und übergibt ihn dem Codeblock:
+3.times do |x|
+print x
+end
+# => 012
+Die Methode upto ruft ihren zugehörigen Block einmal für jeden Wert auf, der zwischen dem Integer, für den sie aufgerufen wird und dem Integer, der als Argument übergeben wird, liegt:
+3.upto(5) do |x|
+print x
+end
+# => 345
+Die Methode downto funktioniert im Prinzip wie upto, nur anders herum, das heißt sie iteriert von der größeren zur kleineren Zahl:
+5.downto(3) do |x|
+print x
+end
+# => 543
+Durch die Methode step kann eine veränderte Schrittweite angegeben werden. Sie wird wie upto für einen Startwert aufgerufen, als Argumente werden ebenfalls der Endwert und zusätzlich die Schrittweiter übergeben:
+3.step(5, 0.5) do |x|
+print x
+print “;”
+end
+# => 3.0;3.5;4.0;4.5;5.0 <br> <br>
+      
+     <b> CODEBLÖCKE <b/><br>
+
+Die Verwendung von Blöcken ist eine der Grundlagen der Verwendung von Iteratoren. Der Code zwischen do und end wird als Codeblock oder anonyme Funktion bezeichnet.
+
+Ein Block kann nicht für sich allein stehen, sondern muss auf den Aufruf einer Methode folgen, der ihn ausführt, wie es z.B. bei Iterationen der Fall ist.
+
+Blöcke werden durch geschweifte Klammern oder die Schlüsselwörter do und end umschlossen.{} bzw. do müssen sich dabei in der gleichen Zeile befinden wie der Methodenaufruf.
+
+Der Rückgabewert eines Blocks ist, wie auch bei Funktionen, der Wert des letzten Ausdrucks, der in dem Block ausgewertet wurde.
+
+Für die Namensräume von Variablen gilt:<br>
+
+→ lokale Variablen, die innerhalb des Codeblocks erzeugt werden, sind außerhalb nicht verfügbar<br>
+
+→ existiert eine lokale Variable bereits außerhalb der Funktion, kann sie innerhalb verwendet werden, d.h. es wird keine neue Variable erzeugt<br> <br>
+
+         <b>5. ARRAYS UND HASHES</b> <br>
+
+         <b> ARRAYS</b><br>
+
+Ein Array ist eine Liste mit mehreren Elementen. Die Länge eines Arrays ist dynamisch, das heißt also, dass diese bei Bedarf mitwächst.
+Ein Array wird erzeugt, indem es mit einem Namen versehen wird, dem entweder [] oder Array.new zugewiesen wird:
+liste = [ ]
+liste = Array.new <br>
+→ in diesen beiden Fällen ist das Array zunächst leer<br>
+→ soll es mit einer bestimmten Länge erzeugt werden, wird beim Aufruf “Array.new” in <br>
+Klammern eine Zahl übergeben:<br>
+liste = Array.new(3)
+Einem Array können auch direkt bei der Erstellung konkrete Werte übergeben werden:
+liste = [1,4,5,6,8]
+liste = Array.new(3,”Hallo”)
+# => [“Hallo”, “Hallo”, “Hallo”] <br>
+
+         <b>ZUGRIFF</b><br>
+
+Der Zugriff auf einen bestimmten Wert im Array funktioniert über den Namen des Arrays und der Angabe der gewünschten Stelle (dem Index) in eckigen Klammern:
+liste = [2]
+# => [5]
+Es kann auch auf einen Teil, d.h. auf mehrere Werte im Array zugegriffen werden. Hierbei wird die erste und letzte Stelle im Array angegeben, auf deren Werte zugegriffen werden soll:
+liste = [2..4]
+# => [5,6,8] (also Zugriff auf die Werte an den Stellen 2 bis 4 im Array)
+Außerdem kann ein Wert innerhalb des Arrays ersetzt werden:
+liste[2] = 100
+# => [1,4,100,6,8]
+Bei negativen Indexzahlen erfolgt der Zugriff von hinten:
+liste[-1] = [1,4,5,6,8]
+# => [8] <br> <br>
+
+         <b>METHODEN</b><br>
+
+→ die Länge von Arrays ist dynamisch und kann dementsprechend verändert werden:<br>
+myArray.insert(stelle, wert)<br>
+→ fügt an der angegebenen Stelle ein neues Element ein und alle folgenden Elemente werden um eine Stelle nach hinten verschoben<br>
+Beispielsweise so:
+liste.insert(3, 10)
+# => [1, 4, 100, 10, 6, 8]
+myArray.delete(wert)
+→ ebenso können bestimmte Werte im Array gelöscht werden, was dann so aussieht:
+liste.delete(4)
+# => [1, 100, 10, 6, 8]<br>
+→ unter der Seite http://ruby-doc.org/core-2.5.0/Array.html findet man noch ganze viele andere Methoden, die man für Arrays anwenden kann!  <br> <br>   
+       
+         <b>  SORTIEREN</b><br>
+
+Eine häufig auftretende Aufgabe in der Programmierung ist das Sortieren von Elementen innerhalb des Arrays. Hierfür wird unter anderem das Bubble-Sort Prinzip verwendet. Das Prinzip dabei ist, immer zwei nebeneinander liegende Elemente zu vergleichen und ggf. zu vertauschen.
+Nebenstehend soll eine Reihe von Zahlen der Größe nach geordnet werden (Größtes nach rechts, Kleinstes nach links).
+Jeweils zwei nebeneinander liegende Zahlen werden verglichen und die größere der beiden nach rechts verschoben.
+Somit gelangt in einem Durchlauf die größte Zahl ganz nach rechts. Im nächsten die zweitgrößte Zahl an die zweite Stelle von rechts, usw.
+Um die Reihe also vollständig zu sortieren, werden n-1 Durchgänge benötigt.
+Um nun konkret Werte in einem Array zu sortieren, wird über die Indexzahl auf die einzelnen Werte zugegriffen und diese miteinander verglichen. Um alle Werte zu erfassen, erfolgt dies in einer Schleife. Das heißt bei ersten Schleifendurchlauf wird der Wert an der Stelle 0 mit dem Wert an Stelle 1 vergleichen. Im nächsten Durchlauf wird dann der Wert an Stelle 1 mit dem an Stelle 2 verglichen usw. Je nachdem, was ein Vergleich ergibt, werden die Werte an den Stellen vertauscht.<br> <br>
+      
+         <b>HASHES</b><br>
+
+Ein Hash ist, wie ein Array, eine Menge von Werten. Anders als im Array sind diese allerdings nicht geordnet, sondern werden über einen Schlüssel identifiziert. Das heißt für jeden Schlüssel ist ein bestimmer Wert hinterlegt:
+grauwerte = {“weiss”=>255, “hellgrau”=> 100, “schwarz”=> 0}
+Der Zugriff auf diese Werte erfolgt ebenfalls über den Schlüssel:
+grauwerte[“hellgrau”]
+# => 100 <br> <br>
+
+         <b>6. TEST-DRIVEN-DEVELOPMENT</b><br>
+
+Test-Driven-Development bezeichnet eine Methode des Programmentwurfs bei der ein Programm schrittweise, begleitet von kontinuierlichem Testen entwickelt wird.   
+         → d. h. ein Teil des Programms wird entworfen, dann getestet und verbessert bis es keine Fehler mehr gibt <br>
+→ dann wird das Programm erweitert, getestet, erweitert, getestet, und so weiter<br>
+→ so sollen Fehler möglichst früh erkannt und gelöst werden<br>
+Folgendes ist ein Beispiel dafür:
+Es soll eine neue Funktion erstellt werden, die testet, ob es sich bei einer Jahreszahl um ein Schaltjahr handelt.
+Es gilt:<br>
+– ist die Zahl durch 4 teilbar, ist das Jahr ein Schaltjahr<br>
+– ist die Zahl durch 4 und durch 100 teilbar, ist das Jahr kein Schaltjahr<br>
+– ist die Zahl durch 4, 100 und 400 teilbar, ist das Jahr ein Schaltjahr<br>
+Um die Funktion schrittweise zu entwickeln, wird nun zuerst ein Test erstellt:<br>
+def assert( expression )
+raise “Fehler!” unless expression
+end<br>
+Der Test gibt eine Fehlermeldung aus, wenn der Ausdruck, für den er durchgeführt wird, nicht wahr ist.<br>
+→ Nun geht es darum, das Programm schrittweise zu entwickeln und zwischendurch immer wieder zu testen.
       
       <h2 class="Fundamentale Ideen der Informatik">Fundamentale Ideen der Informatik</h2>
       <p class="Fundamentale Ideen der Informatik">1. FUNDAMENTALE IDEEN UND BEGRIFFSERKLÄRUNG <br>
