@@ -346,8 +346,393 @@ Im Großen und Ganzen kann ich sagen, dass ich meine Ruby Programmierfähigkeite
       <p class="Fundamentale Ideen der Informatik">1. FUNDAMENTALE IDEEN UND BEGRIFFSERKLÄRUNG <br>
 Fundamentale Ideen sind die grundlegenden Prinzipien, Denkweisen und Methoden der Informatik.
 Man unterscheidet hierbei verschiedene Kriterien.</p>
-        
-        
+Das Horizontalkriterium beschreibt, dass Fundamentale Ideen eine umfassende Anwendbarkeit in allen Bereichen besitzen, und eine Vielzahl von Phänomenen ordnen und integrieren.     
+Das Vertikalkriterium beschreibt, dass Fundamentale Ideen innerhalb eines Anwendungsbereiches auf jeder intellekturellen Ebene aufgezeigt werden. Die Unterschiede können dann in der Tiefe und Detaillierung ersichtlich werden. Ein Beispiel dafür ist, dass Mathematik sowohl in der Schule, als auch in Universitäten gelehrt wird, aber auf unterschiedlichen Niveaus.
+Das Zeitkriterium beschreibt, dass die Idee das Ergebnis einer lang andauernden Beobachtung einer Wissenschaft ist, und längerfristig relevant bleibt.
+Das Sinnkriterium beschreibt, dass die Idee im Bezug zur alltäglichen Sprache und Denken hat, und vortheoretisch unwissenschaftlich ist.<br><br>
+      
+      <b>Anwendungsbeispiel:</b><br>
+
+“Ist das Bedienen einer Tastatur eine fundamentale Idee?”
+Horizontal:
+Ja, da man diese in mehreren Anwendungsbereichen verwenden kann – bspw. im Internet, Spiele, Bearbeitungsprogramme, an unterschiedlichen Geräten, etc.
+Vertikal:
+Ja, weil es egal von wem genutzt werden kann
+Zeitkriterium:
+Nein, da es auch schon alternative Lösungen zu Tastaturen, wie Sprachsteuerung, gibt.
+Sinnkriterium:
+Ja, aber dies kann sich in den kommenden Jahren auch ändern. <br><br>
+
+      <b>EIN PROGRAMMABLAUF</b>
+...ist die Verfolgung der Instruktionen eines Programms.<br>
+→ jede Instruktion kann Speicher lesen, Nebeneffekte haben (Peripheriegeräte, Speicher schreiben) und den Lauf beeinflussen (bedingt oder wiederholte Teile)
+   <b>INFORMATIONSPROZESSE</b><br>
+Informationen sollen modelliert werden können
+Mit Hilfe einer höheren Programmiersprache
+Frage: Wie werden diese Informationen repräsentiert und verarbeitet?
+Werden visualisiert
+Repräsentationen werden visuell dargestellt
+Abläufe werden als Animationen dargestellt <br><br>
+ 
+<b>CODE DEBUGGEN</b> <br> 
+Das Programm hat verschiedene Schnittstellen und Knoten
+Wenn in einem Knoten ein Fehler vorliegt, dann kann oft der Rest nicht ausgeführt werden
+ähnlich wie bei Stromkreis
+Jetzt muss man den Bug (engl. Käfer) ≈ Fehler finden
+Dies kann geschehen, indem man den Fehler visuell darstellt
+bei ruby: debug(„Hallo“)
+Diesen Debug stellt man dann an den Knotenpunkt, wo der Fehler vorliegen könnte und testet ob das Programm an dieser Stelle läuft oder nicht <br><br>     
+      
+      <b>2. VERSIONIERUNG</b><br><br>
+ → Versionierung ist ein System, das erlaubt, mehrere Versionen einer Datei oder eines Verzeichnisses zu synchronisieren und von verschiedenen Devices darauf zuzugreifen und es zu bearbeiten.<br>
+→ Versionierung ist ein System, das paralleles Arbeiten an einer Datei oder an einem Verzeichnis erlaubt<br>
+→ Versionierung ist ein System, das mehrere Versionen synchronisiert<br>
+→ Versionierung ist ein System, das einen Arbeitsfluss zwischen mehreren Leuten erlaubt<br>
+Beispiele hierfür sind: GoogleDocs, Moodle, etc.<br> <br> 
+
+      <b>WIESO BRAUCHT MAN VERSIONIERUNG?</b><br>
+Situation
+→ Person A erstellt ein Dokument (Version 1) und schickt das beschriebene Dokument an Person B weiter.<br>
+→ Person B möchte noch etwas abändern und fügt noch einige weitere Informationen hinzu (Version 1.1) und schickt es dann an Person C weiter<br>
+→ Auch Person C ändert einige Dinge ab (Version 1.2)<br>
+Problem<br>
+→ Person C muss die neuste Version (Version 1.2) jetzt an zwei verschiedene Personen weiterleiten<br>
+→ Person A und Person B wissen somit auch nicht, was Person C alles verändert hat<br>
+→ sehr schwieriges zusammenarbeiten<br>
+
+Lösung<br>
+→ Prinzip der Versionierung: Jede Person hat die aktuelle Version als Kopie und kann somit alle Änderungen der anderen personen mitverfolgen/sehen und somit direkt angezeigt bekommen, wer wann was verändert hat.<br><br>
+      
+
+      <b>VERSIONIERUNGSPROZESS </b><br>
+
+1. Basic Checkins<br>
+einfache Beiträge werden hinzugefügt
+eine Datei wird ständig verändert und gespeichert
+für alle partizipierenden Personen sichtbar/bearbeitbar   <br><br>
+
+      2. Checkout & Edit<br>
+eine andere Person macht eine lokale Kopie<br>
+Änderungen werden an der Arbeitskopie vorgenommen und dann wieder eingecheckt<br>
+er kann die Unterschiede berechnen (diffs) +Eggs +Soup<br>
+Konflikte können auftreten <br>  <br>   
+      
+3. Branching<br>
+unabhängige Arbeiten können auf unterschiedlichen Ästen (branches) stattfinden
+Im Server gibt es zwei unterschiedliche Reihen von Diffs  <br><br>
+    
+ 4. Merging<br>
+      zwei parallele Branches zusammen bringen (Äste werden wieder zusammengeführt) <br> <br>
+      
+      <b>VERTEILTE ODER ZENTRALE VERSIONIERUNG    </b><br> <br>
+Zentrale Versionierung<br>
+→ altes Vorgehen <br>
+→ alle Commits sind auf einem Repository<br>
+→ Konsistenz gesichert, aber Konflikte und Datenverlust<br>br>
+Vertikale Versionierung
+→ modernes Vorgehen<br>
+→ mehrere Repositories<br>
+→ jeder kann einen eigenen Server haben<br>
+→ Commits können erst auf lokalem Repository gemacht werden, erst später wird dann „gepullt“<br>
+→ Diffs (eigentlich Commits) sind Punkt-zu-Punkt vermittelt (Push, Pull)<br>
+→ wechselseitiger Zugriff auf Repositories<br>
+→ möglich: Firmeninterner Austausch, eigene Branches, parallele Entwicklungen mögich, vorherige Versionen können wiederhergestellt werden, aber Speicherplatzbedarf<br>
+Versionierung: eine fundamentale Idee?<br>
+Horizontal:<br>
+→ verschiedene Anwendungsfelder wie Grafik, Extranets, Entwicklung, Wikis…br>
+Vertikal:<br>
+→ Kinder malen zusammen mit Kreiden am Boden<br>
+→ Studenten arbeiten an einem Word Dokument<br>
+Zeit:<br>
+→ rcs und cvs seit den 90ern<br>
+→ GitHub als großer Betreiber der Entwicklung<br>
+GITHUB<br>
+Kooperieren mit GitHub <br>
+Git: Software zur Versionierungsverwaltung (von L Torvalds)
+Code kann ständig aktualisiert werden, den man bekommen hat
+man kann auch vorherige Versionen öffnen —> speichert jede Art von Veränderung
+Entwickler reichen Änderungen ein (durch Kommandozeile)
+GitHub stellt diese Änderungen ausführlich auf zugehörigen Webseite dar
+Alle Operationen durch das Git Programm
+→ Checkout, Commits, Push, Pull<br>
+
+GitHub als Webanzeige<br>
+→ und als Editierungswerkzeug, Freies Login<br>
+→ Freie Verwendung solange es Open-Source bleibt<br>
+Forken mit GitHub<br>
+Forken (Aufgabelung): Entwicklungszweig nach der Aufspaltung eines Projekts in zwei oder mehrere Folgeprojekte
+Jedes lesbare Repository (Ablage) kann geforkt werden<br>
+In der Praxis:<br>
+→ registrieren<br>
+→ Repo finden, Fork Knopf<br>
+→ Checkout, Veränderungen, Commit, Push<br>
+→ Pull Request<br><br>
+Pull Request<br>
+Feature, welches Entwickler nutzen, um die Zusammenarbeit zu erleichtern
+bieten eine benutzerfreundliche Weboberfläche, um Codeänderungen zu diskutieren, bevor sie ins offizielle Projekt integriert werden
+Mechanismus, mit dem Entwickler Teammitglieder über die Fertigstellung eines Features informieren kann
+Sobald sein Feature-Branch soweit ist, setzt er über seinen Bitbucket-Account ein Pull-Request ab → alle Beteiligten wissen dann, dass der Code reviewt und in den Master-Branch gemergt werden muss<br><br>
+ 
+      <b>3. BETRIEBSSYSTEME</b> <br><br>
+
+      <b>Operating System (OS)</b><br>
+Zusammenfassung von Computerprogrammen, welche die Systemressourcen eines Computers regeln
+Darunter zählen unter anderem Arbeitsspeicher, Festplatten und die Ein- und Ausgabegeräte (Tastatur, Bildschirm)
+Ein Betriebssystem verwaltet die genannten Punkte und stellt Anwendungsprogramme zur Verfügung
+Schnittstelle zwischen der Anwendungssoftware des Nutzers und der Hardware
+verfügen über graphische Benutzeroberfläche (graphical user interface → GUI)
+ist auf der Festplatte abgelegt <br> <br>    
+      
+      <b>WIE MACHT MAN EIN PROGRAMM LAUFFÄHIG?</b><br>
+
+Programmquellcode muss kompiliert werden
+→ Umwandlung von Programmcode in ausführbaren Code
+Laufumgebung (Compiler) interpretiert die Kompilierung
+notwendig: Quellcode und ein Compiler<br><br>
+      <b>IDEE EINER BIBLIOTHEK</b><br>
+Application Programming Interface
+Schnittstelle zur Anwendungsprogrammierung
+arbeitet auf Quelltextebene anders als die Binärschnittstellen (ABI)
+Verständigung zwischen 2 Softwareprodukten ohne Eingabe von dem Anwender.
+dient zur Anbindung an das Softwaresystem
+Zugriff auf Datenbanken oder Hardware wie Festplatte/Graphikkarte
+Ein Stück Programmcode, welches dazu dient, dass ein Programm automatisiert angesprochen werden kann<br><br>
+ 
+      <b>API ERKLÄRT</b><br>
+
+ https://www.youtube.com/watch?v=qW1qhb8r8xI<br><br>
+
+      <b>VON NEUMANN ARCHITEKTUR</b><br>
+Komponenten:<br>
+CPU<br>
+Rechenwerk (ALU = arithmetisch-logische Einheit)
+→ Das Rechenwerk führt arithmetische und vergleichende Operationen aus und sorgt für den Transport von Operanden in den und aus dem Hauptspeicher.
+Steuerwerk (CU = control unit)<br>
+→ Das Steuerwerk ermittelt zur Laufzeit die auszuführende Befehlsfolge und sorgt für deren Ausführung.<br>
+E/A-Werk<br>
+→ steuert die Ein- und Ausgabe von Daten<br>
+→ Tastatur, Bildschirm<br>
+Hauptspeicher
+→ besteht aus einer Folge von Speicherzellen, die sowohl Befehle als auch Operanden aufnehmen können<br>
+→ dient der Speicherung des aktuellen Programms, der Übernahme von Eingabedaten, der Übernahme von Daten aus einem externen Speicher und der vorübergehenden Speicherung von Zwischen- oder Endergebnissen.
+Bussystem<br>
+→ reduziert die Anzahl der „Wege“, die zur Kommunikation der verschiedenen Komponenten nötig sind, indem die Kommunikationen auf einem Datenweg zusammengeschlossen werden<br><br>
+      
+      <b>4. JAVA GRUNDLAGEN, KLASSEN UND OBJEKTE</b><br><br>
+
+      <b>WAS IST INTELLIJ IDEA?</b><br>
+→ eine integrierte Entwicklungsumgebung für die Programmiersprache Java<br>
+→ entwickelt von dem Unternehmen namens JetBrains<br><br>
+
+      <b>WAS IST JAVA?</b>br>
+→ eine Scriptsprache<br>
+→ eine objektorientierte Programmierung<br>
+Voraussetzungen:<br>
+→ Java-Entwicklungswerkzeug (JDK) → Erstellung von Java Programmen<br>
+→ Java-Laufteizumgebung (JRE)<br>
+virtuelle Maschine (JVM) und Bibliotheken → Ausführung von Java Programmen<br>
+Funktionsweise:<br>
+→ Quellcode in der Scriptsprache Java schreiben<br>
+→ Quellcode wird von Compiler in Bytecode umgewandelt (von Programmiersprache in Maschinensprache)<br>
+→ JVM (virtuelle Maschinen) werden eingesetzt → interpretiert den Bytecode und führt Programm aus<br>
+→ Je nach Betriebssystem, muss auch eine bestimmte virtuelle Maschine installiert sein, damit das Programm beliebig auf jedem Betriebssystem ausgeführt werden kann<br><br>
+
+ <b>KLASSEN </b>br>
+→ strukturiert die Programme <br>
+→ besteht aus Attributen und Methoden<br>
+→ Verallgemeinerung von Objekten<br>
+→ beschreibt, was für Attribute ein Objekt haben kann, weist ihr aber keinen Wert zu<br>
+→ genauere Beschreibung und Wertzuweisung gibt es erst beim Objekt<br><br>
+      <b>BEISPIEL</b><br>
+Mensch mit Eigenschaften wie Augenfarbe, Geschlecht, Größe und Funktionen wie Sprechen, jedoch weiß man noch nicht welche Werte diese Eigenschaften haben<br><br>
+
+      <b>OBJEKTE</b>br>
+→ genauere Beschreibung eines Dinges aus der Realität<br>
+→ bestimmte Attribute (Eigenschaften), mit einem bestimmten Wert (der jeweiligen Klasse)<br>
+→ sind nicht immer greifbare Dinge, sondern auch Datenstrukturen<br>
+→ jedes Objekt ist einer Klasse zugehörig<br>
+→ Klasse Mensch kann viele Objekte haben → 7,5 Milliarden Objekte insgesamt auf der Welt<br><br>
+
+      <b>BEISPIEL </b>
+
+Objekt = Amina Serdarevic
+Augenfarbe = graublau
+Haarfarbe = dunkelblond
+Größe = 1,75 m
+Geschlecht = weiblich
+Sprache = bosnisch
+
+      <b>ATTRIBUTE</b><br>
+
+→ Eigenschaft eines Objekts einer Klasse<br>
+→ hat einen bestimmten Wert<br>
+→ Bsp. Geschlecht = weiblich<br>
+
+      <b>SUBKLASSEN</b><br>
+
+→ ist eine Klasse, deren Objekte zu einer anderen Klasse gehören<br>
+→ alle Klassen sind Subklassen von Objekten, sie haben:<br>
+→ eine toString Methode, um in der Konsole gedruckt zu werden<br>
+→ eine equals Methode, um mit anderen verglichen zu werden<br><br>
+
+      <b>METHODEN</b><br>
+
+→ werden mit einem Namen aufgerufen <br>
+→ kann einen Wert zurückgeben<br>
+→ um Variablen zu isolieren, um Wiederholungen zu vermeiden<br>
+→ Interaktionene, die man an einem Objekt durchführen kann (z.B. sprechen), nennt man Methoden<br>
+→ Funktionen und Verhaltensweisen<br>
+→ greift auf Eigenschaften eines Objekts zu<br>
+→ Attribute können verändert werden, Attributwerte können abgefragt werden<br>
+→ Eigenschaften können auch zwei Zustände haben (z.B. bei einem Lichtschalter an/aus)<br>
+→ durch Methoden kann abgefragt werden, ob eine bestimmte Eigenschaft zutrifft (true) oder nicht (false)<br>
+→ Methoden können:<br>
+– private sein und sind nur in der Klasse sichtbar<br>
+– protected sein und somit auch in den Subklassen und im Package sichtbar sein<br>
+– default sein und damit im Package sichtbar<br>
+– public sein und so von überall erreichbar<br><br>
+
+      <b>VARIABLEN</b><br>
+
+→ Behälter für einen veränderlichen Inhalt<br>
+→ Platzhalter für Daten<br>
+→ arithmetische Operationen (rechnen)<br>
+→ müssen immer sinnvoll benannt werden (Codelesbarkeit)<br><br>
+
+      <b>DATENTYPEN</b><br>
+→ bei jeder Deklaration einer Variable muss auch ihr Datentyp angegeben werden<br>
+→ variable wird erst deklariert anschließend wird ein Wert zurückgegeben<br>
+
+int = tee;
+tee = 250;Mit System.out.printIn(tee); kann die Variable ausgegeben werden
+Anzeige: 250 <br><br>
+
+      <b>5. SUCHMASCHINEN</b><br>
+Eine Suchmaschine ist ein Programm zur Recherche von Dokumenten, die in einem Computer oder einem Computernetzwerk wie z. B. dem World Wide Web gespeichert sind. Internet-Suchmaschinen haben ihren Ursprung in Information-Retrieval-Systemen. Sie erstellen einen Schlüsselwort-Index für die Dokumentbasis, um Suchanfragen über Schlüsselwörter mit einer nach Relevanz geordneten Trefferliste zu beantworten. Nach Eingabe eines Suchbegriffs liefert eine Suchmaschine eine Liste von Verweisen auf möglicherweise relevante Dokumente, meistens dargestellt mit Titel und einem kurzen Auszug des jeweiligen Dokuments. Dabei können verschiedene Suchverfahren Anwendung finden.<br><br>
+
+ AUFGABEN<br>
+→ Erstellen und Pflege von Datenstrukturen mit Informationen über Dokumente<br>
+→ Verarbeiten von Suchanfragen<br>
+→ Aufbereitung der Ergebnisse (meist nach Relevanz sortiert) <br><br>
+      
+      
+      <b>  6. DATENSTRUKTUREN</b><br>
+Eine Datenstruktur ist ein Objekt zur Speicherung und Organisation von Daten. Es handelt sich um eine Struktur, weil die Daten in einer bestimmten Art und Weise angeordnet und verknüpft werden, um den Zugriff auf sie und ihre Verwaltung effizient zu ermöglichen.
+LINKED LIST <br>
+→ LinkedList (java.util.LinkedList), wird im Deutschen auch als Verkettete Liste bezeichnet<br>
+→ jedes Element hat einen Nachfolger links und einen rechts<br>
+→ Bei einer LinkedList stehen alle Listenelemente in Verbindung zum jeweiligen Vorgänger bzw. Nachfolger<br>
+→ Existiert kein Nachfolger, so verweist das letzte Element auf die null-Referenz.<br>
+→ Der Vorteil bei einer Verketteten Liste besteht darin, dass im Vergleich zu einer ArrayList die Elemente schneller hinzugefügt und gelöscht werden können → Verweise auf Nachbarn müssen geändert werden<br>
+→ Element der Liste an einer bestimmten Stelle auslesen → Zugriff langsamer, da Verbindungen bis zu passenden Element durchlaufen werden muss<br>
+→ Entscheidung für einen bestimmten Listen-Typ sollte von der Art und Anzahl der Zugriffe abhängig gemacht werden<br>
+
+Linked List is a data structure consisting of a group of vertices (nodes) which together represent a sequence. Under the simplest form, each vertex is composed of a data and a reference (link) to the next vertex in the sequence. Try clicking Search(77) for a sample animation on searching a value in a (Singly) Linked List.
+Linked List and its variations are used as underlying data structure to implement List, Stack, Queue, and Deque ADTs.<br><br>
+      
+      <b>7. PARALLELITÄT</b><br>
+
+→ wenn mehrere Prozesse in einem Netzwerk oder Core laufen<br>
+→ Beispiel: Steam und Spotify laufen gleichzeitig<br>
+Im Modell von Neumann gibt es keine Parallelität mit Prozessoren. Ein Schedule also ein Ausführungsplan ist für die vielen Durchführungen zuständig. Der Schedule gibt zudem noch an, in welcher Reihenfolge die Operationen stattfinden. Unteranderem gehören zu den Operationen Lese- und Schreiboperationen sowie Terminatorenoperationen. Desweiteren macht ein Schedule alle 50ms Unterbrechungen und fährt anschließend fort. Wir Nutzer merken dies nicht. Daher sind viele Betriebssysteme multitaskingfähig oder interleavingfähig. Interleaving ist eine Optimierungstechnik bei der Datenübertragung. Dort werden Daten in einer bestimmten Reihenfolge geordnet, um einen höheren Datensatz zu bekommen. <br><br>     
+    
+      <b>8. BENUTZERSCHNITTSTELLEN</b>br>
+
+Die Benutzerschnittstelle ist die Stelle oder Handlung, mit der ein Mensch mit einer Maschine in Kontakt tritt. Im einfachsten Fall ist das ein Lichtschalter: Er gehört weder zum Menschen, noch zur „Maschine“ (Lampe), sondern ist die Schnittstelle zwischen beiden.<br>
+→ auch Mensch-Maschine-Schnittstelle oder Human-Computer-Interaction genannt <br> <br>
+
+      <b>BESTANDTEILE</b><br>
+
+→ Zugang zu Programmen und Dateien wird als Icon (Bildsymbole) dargestellt<br>
+→ Programme öffnen ein Hauptfenster → GUI-System erlaubt, solche Fenster in ihrer Größe und Position zu verändern, auszublenden oder auf die gesamte Bildschirmgröße zu vergrößern<br>
+→ Weitere Bedienelemente: Schaltflächen (Buttons), Toolbars (Symbolleisten, Werkzeugleisten), Schieberegler, Auswahllisten und Symbole<br>
+→ Zusammengefasst werden alle diese Elemente zum WIMP-Modell (engl. W für Windows (Fenster), I für Icons (Datei- und Programmsymbole), M für Menu (Menü) und P für Pointer (Zeiger, der zum Beispiel durch die Maus bewegt wird))<br>
+→ Eine Palette als GUI-Element ist „nicht-modal“ und wird oft am Seitenrand angeordnet<br><br>      
+      
+      <b> 9. NETWORK</b> <br><br>
+
+      <b>NETZWERK</b><br>
+
+→ Zusammenschluss von verschiedenen technischen Systemen → ermöglicht Kommunikation der Systeme untereinander<br>
+→ Ziel: gemeinsame Nutzung von Ressourcen, wie bspw. Datenbanken, Drucker, Dateien oder Servern<br>
+→ die Kommunikation verläuft über verschiedene Protokolle<br>
+
+ <b>IDEE PACKET NETWORK </b><br> <br>  
+→ ein Netzwerk aus verschiedenen Computern mit verschiedenen Adressen und Routern können miteinander kommunizieren<br>
+→ sie versenden sich gegenseitig verschiedene Datenpakete (Datenpaket ist eine Bezeichnung für in sich geschlossene Dateneinheiten)<br>
+→ sie besitzen einen Sender und einen Empfänger<br>
+→ das Meiste in einem Datenpaket besteht aus wichtigen Adressierungs- und
+Verwaltungsinformationen, welche von IP-basierten Netzwerken die mit Quelladressen gefüllt sind an den richtigen Computer liefern<br>
+→ Solche Informationen befinden sich in einem Header (Header sind die Zusatzinformationen, die Nutzerdaten am Anfang eines Datenblocks ergänzen)<br><br>
+
+      <b>SOCKETS</b><br>
+→ ein Socket ist ein Modul, welches als Kommunikationsendpunkt dient<br>
+→ Sockets werden verwendet, um Daten mit anderen Programmen auszutauschen<br>
+→ das Programm kann sich auf dem selben oder einem anderen Computer befinden<br>
+→ Sockets können Daten empfangen und versenden<br>
+→ sind dafür zuständig, dass Daten in der richtigen Reihenfolge versendet werden<br> <br>
+
+      <b>BUFFER</b><br>
+
+→ Speicher für die Zwischenlagerung von Daten<br>
+→ die Daten, welche als erste da sind, werden zuerst empfangen, die anderen befinden sich sozusagen in einer “Warteschlange”<br>
+→ es können immer wieder Daten hinzukommen, die sich aber so lange in der Warteschlange befinden, bis sie empfangen werden<br><br>
+
+      <b>10. VERSCHLÜSSELUNG</b><br>
+
+Die Verschlüsselung ist eine Möglichkeit, die Sicherheit von Daten zu erhöhen, indem der Inhalt einer Nachricht oder Datei so unkenntlich gemacht wird, dass sie nur von der Person gelesen werden kann, die über den passenden Verschlüsselungsschlüssel verfügt.  
+Die Grundidee der Verschlüsselung ist es, wie oben dargestellt wird, eine Nachricht von A nach B zu verschicken, ohne dass C die Nachricht sehen kann. So wie mit Postkarten, welche nicht „verschlüsselt“ sind und der „3.“ sie eventuell lesen kann, im Falle der Postkarte der Postbote. Durch Verschlüsselung wird dies verhindert. Um einen verschlüsselten Text zu lesen, muss man „nur“ den Schlüssel besitzen. Wenn man diesen hat, ist das Lösen der Verschlüsselung nicht mehr schwer. <br><br>     
+      
+      <b>  11. KOMPRIMIERUNG </b><br>
+
+Die Datenkompression – auch Datenkomprimierung genannt – ist ein Vorgang, bei dem die Menge digitaler Daten verdichtet oder reduziert wird. Dadurch sinkt der benötigte Speicherplatz und die Übertragungszeit der Daten verkürzt sich.
+Es werden zwei Arten von Komprimierung unterschieden, nämlich die verlustfreie und die verlustbehaftete Komprimierung.
+Die verlustfreie Komprimierung kann zurück in ihren Originalzustand gebracht werden, ist also reversibel.
+Die verlustbehaftete Komprimierung hingegen kann nicht in ihren Originalzustand gebracht werden, da Daten verloren gehen. <br><br>
+ <b>HUFFMAN CODIERUNG</b><br>
+Die Huffman-Kodierung ist eine Form der Entropiekodierung, die 1952 von David A. Huffman entwickelt wurde um eine verlustlose Kompression zu ermöglichen.
+Prinzip: Statt jedem Wort einen gleichlangen Code zuzuordnen, bekommen Zeichen, die häufig im Text vorkommen einen kürzeren Code als seltene Zeichen.
+Hilfsmittel: Codebäume, mit denen sich Codewörter grafisch als Baum darstellen lassen. Den Code eines Zeichen liest man aus dem Codebaum ab, indem man von unten (also der Wurzel des Baumes) bis zum gesuchten Zeichen am Ende des Baumes wandert und die dabei gefundenen Beschriftungen an den Verzweigungen notiert.<br><br>  
+   
+      <b> 12. MASCHINELLES LERNEN</b><br>
+
+ Maschinelles Lernen lässt sich als Teilgebiet der künstlichen Intelligenz betiteln. Hierbei wird Lernen als: „[…] ein Prozess [dargestellt], der zu einer Performanzsteigerung eines Systems führt.“
+Das System ist hierbei der Computer, oder der Mensch und die Performanzsteigerung stellt die Verhaltensänderung im Hinblick auf die Optimierung einer Bewertungsfunktion dar.
+Ein künstliches System lernt aus Beispielen und kann nach Beendigung der Lernphase verallgemeinern. Es lernt dabei nicht einfach Beispiele auswendig, sondern es erkennt Gesetzmäßigkeiten in den Lerndaten. So kann das System auch unbekannte Daten beurteilen.<br><br>
+
+      <b>INDUKTIVES LERNEN</b><br>
+= aus dem Speziellen, das Allgemeine lernen<br>
+→ die Idee ist die, dass man eine Funktion aus Beispielen lernen soll und mithilfe von gegebenen Fakten, Hypothesen aufstellt<br>
+Ablauf: Funktion finden ⇒ Funktion passt für möglichst viele Beispiele ⇒ Funktion wird verallgemeinert<br>
+
+BEISPIEL:<br>
+Gegeben: Schwimmt (Forelle), Schwimmt (Karpfen)<br>
+Folgerung: Schwimmt (Fisch)<br>
+→ Vom Spezifischen auf das Allgemeine<br><br>
+
+      <b>LATENT SEMANTIC ANALYSIS</b><br>
+= Verfahren der automatischen Sprachverarbeitung<br>
+→ dient also dazu, um Ähnlichkeiten zwischen unterschiedlichen Ausdrücken zu errechnen<br>
+
+Ziel: die generellen Begriffe eines Dokumentes zu finden<br>
+Idee: Wörter, die häufig im Dokument vorkommen, haben eine latent ähnliche Bedeutungen<br><br>
+
+BEISPIEL:<br>
+→ aus sehr viele Daten (z.B. im Internet) sollen diejenigen gefunden werden, in denen das Wort Auto vorkommt<br>
+→ auch diejenigen, in denen es um das Thema Auto geht, aber der Name nicht explizit im Dokument genannt wird<br>
+→ kann Dokumente unterscheiden, in denen es wirklich um Autos geht und in denen nur das Wort Auto vorkommt (wie zum Beispiel Gewinnspiele)<br><br>
+
+      b>FUNKTIONSWEISE:</b><br>
+→ Worterscheinung werden als Matrix gesammelt<br>
+→ in Spalten werden die Erscheinungsmengen der Wörter gesammelt<br>
+→ in den Reihen die Dokumente     <br><br>
+
+      <b>13. FAZIT</b> <br><br>
+
+Meine Erfahrungen mit dem Kurs Fundamentale Ideen der Informatik waren eher negativ, da meine Kohorte den Kurs aufgrund von Ausfällen nur sehr selten besuchen konnte. Außerdem haben wir auch kein Folien von Herrn Beer zur Verfügung gestellt bekommen, weshalb ich mit den Materialien von Herrn Libbrecht gearbeitet habe. Aufgrund von einer sprachlichen Barriere fiel es mir sehr schwer etwas zu verstehen, weshalb ich mich oft auf eigene Recherchen bezogen habe. Dadurch konnte ich das E-Portfolio dann aber vervollständigen und nachvollziehen.     
+      
+      
+      
       <h1 class="Schwerpunkte">Schwerpunkte</h1>
       <p class="Schwerpunkte">Unter diesem Reiter finden Sie meine beiden Schwerpunkte zu den Vorlesungen „Programmieren in einer objektorientierten Umgebung“ und „Fundamentale Ideen der Informatik„. Viel Spaß beim Durchstöbern! 🙂</p>
       
