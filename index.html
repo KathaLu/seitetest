@@ -37,10 +37,10 @@ puts – es erfolgt eine Ausgabe mit Zeilenumbruch <br>
 print – es erfolgt eine Ausgabe ohne Zeilenumbruch <br>
 Raute (#) – hierbei handelt es sich um einen Kommentar; die Raute und alles das in der Zeile danach steht wird vom Ruby-Interpreter ignoriert <br>
 #=> – eine Raute mit einem darauffolgenden Pfeil zeigt an, welcher Wert bei dem Code herauskommen würde, wenn man ihn ausführen würde <br> <br>
-      <b>2. DATENTYPEN UND VARIABLEN </b> <br>
+      <b>2. DATENTYPEN UND VARIABLEN </b> <br> <br>
 
       <b> DATENTYPEN </b> <br>
-Daten, ihre Ausführung und Manipulation bilden die Basis von Computerprogrammen. In Ruby sind folgende, einfache und komplexe Datentypen vordefiniert: <br>
+Daten, ihre Ausführung und Manipulation bilden die Basis von Computerprogrammen. In Ruby sind folgende, einfache und komplexe Datentypen vordefiniert: <br><br>
 
       <b>EINFACHE DATENTYPEN</b> <br>
 
@@ -60,19 +60,15 @@ puts „1 + 2 = #{1+2}“ #=> 1 + 2 = 3
 
 Boolean / Boolsche Werte: …logische Aussage, kann wahr (true), falsch (false) oder leer (nil) sein
 
-In manchen Fällen ist eine Umwandlung der Datentypen notwendig. Ein Beispiel finden Sie in der ersten Übung zu diesem Kapitel. Hierfür gibt es folgende Befehle:
+In manchen Fällen ist eine Umwandlung der Datentypen notwendig. Ein Beispiel finden Sie in der ersten Übung zu diesem Kapitel. Hierfür gibt es folgende Befehle:<br>
 
-      <b>UMWANDLUNG DER DATENTYPEN</b> <br>
+      <b>UMWANDLUNG DER DATENTYPEN</b> <br><br>
 
 .to_s – Umwandlung zu einem String
 
 .to_i – Umwandlung zu einem Integer
 
 .to_f – Umwandlung zu einem Float <br> <br>
-
-      <b>ÜBUNG</b> <br>
-
-Wiederhole nun deine Eingabe und wandle dein Alter (bisher Datentyp Integer) in einen String um. <br> <br>
 
       <b> VARIABLEN</b> <br>
 
@@ -81,16 +77,16 @@ Variablen kann man sich wie ein Gefäß vorstellen, in dem ein Wert hinterlegt w
 Es wird weiter unterschieden zwischen lokalen und globalen Variablen.
 Lokale Variablen werden entweder durch einen Unterstrich oder einen Kleinbuchstaben zu Beginn der Variable gekennzeichnet. Sie gelten für die Methode, für die sie definiert werden. Wenn aber eine Methode bereits eine Variable verwendet, greift sie auf diese zurück, und erstellt keine neue.
 Globale Variablen werden mit einem $ gekennzeichnet. Diese sind immer und überall im Ruby Programm sichtbar. Es gibt auch globale Variablen, die keinen zugewiesenen Wert haben, besitzen dann automatisch den Wert nil. <br> <br>
-      <b> LITERALE UND AUSDRÜCKE</b> <br>
+      <b> LITERALE UND AUSDRÜCKE</b> <br><br>
 
       <b>LITERALE</b> <br>
 
 Um bestimmte Ausdrücke zu erzeugen, gibt es eine Art Kurzsyntax, die Literale. Einfach ausgedrückt sind Literale Abfolgen von Ziffern und Zahlen.
-‘ein String Literal’
+‘ein String Literal’ <br> <br>
       <b>AUSDRÜCKE</b><br>
 Ein Ausdruck ist ein Stück Code, der vom Ruby-Interpreter ausgewertet wird, um einen Wert zu erzeugen. Primärausdrücke sind die einfachsten möglichen Ausdrücke, die nicht aus einfacheren Ausdrücken zusammengesetzt sind. Dazu gehören Literale, Referenzen auf Variablen und Aufrufe von Methoden.
-Es können ebenfalls größere Ausdrücke erzeugt werden. Dies erfolgt indem man Primärausdrücke durch Operatoren kombiniert werden.
-      <b>3. ANWEISUNGEN UND FUNKTIONEN</b><br>
+Es können ebenfalls größere Ausdrücke erzeugt werden. Dies erfolgt indem man Primärausdrücke durch Operatoren kombiniert werden. <br> <br>
+      <b>3. ANWEISUNGEN UND FUNKTIONEN</b><br><br>
 
       <b>OPERATOREN</b> <br>
 
@@ -107,7 +103,7 @@ Funktionsrumpf
 end <br> <br>
       <b>4. KONTROLLSTRUKTUREN</b> <br>
 
-Kontrollstrukturen dienen dazu den geradlinigen Programmfluss zu unterbrechen und an anderen Stellen zu verzweigen. Dies geschieht in Form von Fallentscheidungen oder Schleifen.<br>
+Kontrollstrukturen dienen dazu den geradlinigen Programmfluss zu unterbrechen und an anderen Stellen zu verzweigen. Dies geschieht in Form von Fallentscheidungen oder Schleifen.<br><br>
 
       <b>FALLENTSCHEIDUNGEN</b><br>
 
@@ -148,7 +144,7 @@ print “;”
 end
 # => 3.0;3.5;4.0;4.5;5.0 <br> <br>
       
-     <b> CODEBLÖCKE <b/><br>
+     <b> CODEBLÖCKE </b><br>
 
 Die Verwendung von Blöcken ist eine der Grundlagen der Verwendung von Iteratoren. Der Code zwischen do und end wird als Codeblock oder anonyme Funktion bezeichnet.
 
@@ -164,7 +160,7 @@ Für die Namensräume von Variablen gilt:<br>
 
 → existiert eine lokale Variable bereits außerhalb der Funktion, kann sie innerhalb verwendet werden, d.h. es wird keine neue Variable erzeugt<br> <br>
 
-         <b>5. ARRAYS UND HASHES</b> <br>
+         <b>5. ARRAYS UND HASHES</b> <br><br>
 
          <b> ARRAYS</b><br>
 
