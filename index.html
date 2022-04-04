@@ -762,12 +762,123 @@ Es war stets interessant und für mich persönlich auch sehr verlockend, wenn et
 Es hat mir sehr viel Freude bereitet dieses Spiel zu programmieren, und bin sehr stolz sagen zu können, dass dies unser Werk ist!
       
       <h2 class="Fundamentale Ideen der Informatik – Schwerpunkt">Fundamentale Ideen der Informatik – Schwerpunkt</h2>
-      <p class="Fundamentale Ideen der Informatik – Schwerpunkt">EINFÜHRUNG VERSCHLÜSSELUNG: <br>
+      <p class="Fundamentale Ideen der Informatik – Schwerpunkt"> VERSCHLÜSSELUNG – <b>ADVANCED ENCRYPTION STANDARD </b><br><br>
+          
+<b> EINFÜHRUNG VERSCHLÜSSELUNG: </b><br> <br>
 
 Unter Verschlüsselung versteht man Verfahren und Algorithmen, die Daten mittels digitaler bzw. elektronischer Codes oder Schlüssel inhaltlich in eine nicht lesbare Form umwandeln. Diesen Vorgang bezeichnet man als Verschlüsseln. Gleichzeitig wird dafür gesorgt, dass nur mit dem Wissen eines Schlüssels die geheimen Daten wieder entschlüsselt werden können.
-Anstatt von Verschlüsselung spricht man auch von Chiffrierung, was das gleiche meint.
+Anstatt von Verschlüsselung spricht man auch von Chiffrierung, was das gleiche meint.<br><br>
+          <b>EINFÜHRUNG ADVANCED ENCRYPTION STANDARD:</b>br>
 
- </p>
+Der Advanced Encryption Standard (AES) ist eine Blockchiffre, die als Nachfolger für DES im Oktober 2000 vom National Institute of Standards and Technology (NIST) als Standard bekanntgegeben wurde. Nach seinen Entwicklern Joan Daemen und Vincent Rijmen wird AES auch Rijndael-Algorithmus genannt.
+Es handelt sich um ein symmetrisches Verschlüsselungsverfahren. Der Rijndael-Algorithmus besitzt variable, voneinander unabhängige Block- und Schlüssellängen von 128, 160, 192, 224 oder 256 Bit. Außerdem bietet dieser ein sehr hohes Maß an Sicherheit; → erst mehr als zehn Jahre nach seiner Standardisierung wurde der erste theoretisch interessante, praktisch aber nicht relevante Angriff gefunden.<br><br>
+          
+<b>ENTSTEHUNG ADVANCED ENCRYPTION STANDARD:</b><br>
+Im Januar 1997 schrieb das amerikanische Handelsministerium eine Suche nach einem Nachfolger des DES-Verfahrens aus, da dieses als Verschlüsselungsverfahren nicht mehr so gut funktionierte, da es auf eine Datengröße von 56 Bit beschränkt war. Es wurden folgende Rahmenbedingungen gegeben, die das zukünftige AES Verfahren erfüllen musste:<br>
+muss ein symmetrischer Algorithmus sein<br>
+muss 128 Bit lange Blöcke verwenden<br>
+muss Schlüssel von 128, 192 und 256 Bit Länge einsetzen können<br>
+soll gleichermaßen leicht in Hard- und Software zu implementierbar sein<br>
+soll eine überdurchschnittliche Leistung haben<br>
+soll allen bekannten Methoden der Kryptoanalyse widerstehen können, insbesondere Power- und Timing-Attacken<br>
+geringe Ressourcen Erforderlichkeit<br>
+frei von patentrechtlichen Ansprüchen sein und muss von jedermann unentgeltlich genutzt werden können<br>
+Neben Joan Daemen und Vincent Rijmen gab es noch Teilnehmer aus vielen weiteren Ländern, die ihre Ideen präsentiert haben. Auch Deutschland wurde durch die Deutsche Telekom mit der „Magenta“ als Idee vertreten. Aufgrund von massiver Sicherheits- und Leistungsprobleme wurde diese dann aber nicht ausgewählt.       
+In Bezug auf die drei Hauptkriterien, Kosten, Implementierung und Sicherheit, entschied sich die NIST (National Institute of Standards and Technology) für das Rijndael Verfahren.<br><br>
+
+          <b>ABLAUF:</b><br>
+Rijndael sind Blockchiffren auf Basis eines Substitutions-Permutations-Netzwerks (SPN). Das Verfahren wechselt bei jedem Schritt zwischen Substitution und Permutation, weshalb man AES auch als SP-Chiffre bezeichnet. Dabei erfolgt die Transformation des Klartextes in mehreren Runden gleichen Aufbaus. Der Klartext wird dabei nicht als Ganzes, sondern in Blöcken verarbeitet. Hierbei findet eine Konfusion statt, es wird also unter anderem die Beziehung zwischen Klar- und Geheimtext verwischt.
+Die Blocklänge unterscheidet sich zwischen Rijndael und AES etwas, bei Rijndael können die Block- und Schlüssellänge unabhängig voneinander die Werte 128, 160, 192, 224 oder 256 Bits haben. Bei AES wurde die Blocklänge auf 128 Bit und die Schlüsselgröße auf 128 (10 Runden), 192 (12 Runden) und 256 Bit (14 Runden), nach den Anforderungen von der NIST, festgelegt.
+Die AES-Entschlüsselung sieht notwendigerweise vor, dass dieselben Schritte wie bei der Verschlüsselung durchlaufen werden müssen, nur eben in umgekehrter Reihenfolge.
+Jeder Block wird zunächst in eine zweidimensionale Tabelle mit vier Zeilen geschrieben, dessen Zellen ein Byte groß sind. Die Anzahl der Spalten variiert je nach Blockgröße von 4 (128 Bit) bis 8 (256 Bit). Jeder Block wird nun nacheinander bestimmten Transformationen unterzogen. Aber anstatt jeden Block einmal mit dem Schlüssel zu Chiffrieren, wendet AES verschiedene Teile des Schlüssels nacheinander auf den Klartext-Block an. Die Anzahl dieser Runden (r) variiert und ist von Schlüssellänge (k) und Blockgröße (b) abhängig:<br><br>
+ 
+Der weitere Ablauf ist dann in folgende Schritte eingeteilt:<br>
+
+Schlüsselexpansion<br>
+Vorrunde<br>
+KeyAddition ()<br>
+Verschlüsselungsrunden (wiederhole solange runde<r)<br>
+Substitution()<br>
+ShiftRow()<br>
+MixColumn()<br>
+KeyAddition()<br>
+Schlussrunde<br>
+Substitution()<br>
+ShiftRow()<br>
+KeyAddition()<br>
+→ Die Schlussrunde zählt auch als Runde, also R = Anzahl Verschlüsselungsrunden + 1 Schlussrunde<br><br>
+
+<b>SCHLÜSSELEXPANSION</b><br>
+zunächst werden aus dem Schlüssel R + 1 Teilschlüssel, auch Rundenschlüssel genannt, erzeugt
+Die Rundenschlüssel müssen die gleiche Länge wie die Blöcke haben
+Mathematisch dargestellt heißt dies dann „b*(R+1)“ wobei b die Blocklänge angibt
+Der Schlüssel wird dann in eine zweidimensionale Tabelle mit vier Zeilen und Zellen, die jeweils 1 Byte groß sind, abgebildet
+Die ersten Spalten werden dann mit dem Benutzerschlüssel gefüllt
+Alle weiteren Spalten werden rekursiv berechnet:
+Um die Werte für die Zellen in der nächsten Spalte zu erhalten, werden die Spalten, welche je nach Blockgröße ein Vielfaches der vierten, sechsten oder achten Spalte sind, nach links rotiert [a0,a1,a2,a3] wird zu [a1,a2,a3,a0] und mit Hilfe der S-Box verschlüsselt
+Danach wird der „vorderste“ Wert der Spalte mit der rcon-Tabelle XOR verknüpft und abschließend die gesamte Spalte mit der um eine Schlüssellänge zurückliegenden Spalte XOR verknüpft
+Alle anderen Spalten werden aus einer XOR-Verknüpfung mit der Spalte eine Schlüssellänge vorher gebildet
+Eine Ausnahme bildet AES-256
+Hierbei wird jede 4. Spalte durch die S-Box ersetzt und dann mit der Spalte eine Schlüssellänge davor XOR-verknüpft <br> <br>          
+          
+          <b>ADDROUNDKEY</b><br><br>
+
+Die KeyAddition wird in der Vorrunde und am Ende jeder anderen Verschlüsselungsrunde ausgeführt
+Hier wird eine bitweise XOR-Verknüpfung zwischen dem Block und dem aktuellen Rundenschlüssel vorgenommen
+Dies ist die einzige Funktion in AES, die den Algorithmus vom Benutzerschlüssel abhängig macht<br> <br>
+ 
+
+          <b>SUBBYTES</b> <br><br>
+
+Im ersten Schritt jeder Runde wird für jedes Byte im Block ein Äquivalent in der S-Box gesucht
+so werden die Daten monoalphabetisch verschlüsselt<br><br>
+ 
+
+          <b>SHIFTROWS</b><br><br>
+
+In diesem Schritt werden die Zeilen um eine bestimmte Anzahl von Spalten nach links verschoben
+Überlaufende Zellen werden von rechts fortgesetzt
+Die Anzahl der Verschiebungen hängt von den Block und Zeilenlängen ab
+Die Zeile wird entweder um 1 bis 4 Spalten verschoben <br><br>        
+ 
+          <b>MIXCOLUMN</b><br><br>
+
+Nun werden die Spalten vermischt
+Es wird zunächst jede Zelle einer Spalte mit einer Konstanten multipliziert und anschließend die Ergebnisse XOR verknüpft
+Hinter dieser Vorgehensweise steckt ein komplizierter mathematischer Zusammenhang, den ich hier nicht näher erläutere<br><br>
+ 
+
+          <b>ENTSCHLÜSSELUNG</b><br><br>
+
+Hier wird rückwärts vorgegangen
+Die Daten werden zunächst wieder in zweidimensionale Tabellen gelesen
+Danach werden die Rundenschlüssel generiert
+Allerdings wird nun mit der Schlussrunde angefangen und alle Funktionen in jeder Runde in der umgekehrten Reihenfolge aufgerufen
+Durch die vielen XOR-Verknüpfungen unterscheiden sich die meisten Funktionen zum Entschlüsseln nicht von denen zum Verschlüsseln
+Es muss eine andere S-Box genutzt werden (die sich aus der original S-Box berechnen lässt) und die Zeilenverschiebungen erfolgen in die andere Richtung<br><br>
+ 
+
+          <b>ANWENDUNGSBEREICHE</b><br><br>
+
+AES findet einen sehr großen Anwendungsbereich, wie zum Beispiel für folgende Programme:<br>
+Verschlüsselungsstandard IEEE 802.11i für Wireless LAN<br>
+SRTP<br>
+Skype<br>
+Mac OS X als Standardverschlüsselungsmethode für Disk-Images<br>
+FileVault<br>
+Komprimierte Dateiarchive wie 7-ZIP oder RAR<br><br>
+ 
+
+          <b>KRITIK</b><br><br>
+
+Je nach verwendetem Schlüssel besteht nur eine Sicherheitsmarge von drei (bei 128 Bits Schlüssellänge) bis fünf Runden (bei 256 Bits Schlüssellänge)
+Einfache algebraische Beschreibung der S-Boxen, die ihrerseits die einzige nichtlineare Komponente der Chiffre sind
+Deshalb lässt sich der gesamte Algorithmus als Gleichungssystem beschreiben
+Durch den einfachen Key Schedule würden mit einem beliebigen Rundenschlüssel auch 128 Bit des Verfahrensschlüssels kompromittiert          
+          
+          
+          
+ </p>   
       </div>
     
     
