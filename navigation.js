@@ -33,7 +33,7 @@ function searchFunction(searchText) {
     //check if class name is found in HTML
     if ((count < element.length) & (lastSearchedText !== searchText)) {
       element[count].scrollIntoView();
-      count++;
+      count+;
       lastSearchedText = searchText;
       console.log(lastSearchedText);
     } else {
