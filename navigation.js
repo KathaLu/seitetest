@@ -1,6 +1,4 @@
-<!-----------JavaScript  ------------>
-
- var count = 0;
+var count = 0;
 var lastSearchedText = undefined;
 var dummyElement = document.createElement('div');
 var a = document.createElement('a');
