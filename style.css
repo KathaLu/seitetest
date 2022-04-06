@@ -4,6 +4,7 @@ body {
 }
 
 .svg {
+  size: 80%;
   height: 350;
   width: 100%;
   position: fixed;
