@@ -4,8 +4,8 @@ body {
 }
 
 .svg {
-  height: 100%;
-  width: 50%;
+  height: 250;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -20,7 +20,8 @@ body {
 }
 
 .inhalt {
-  margin-left: 50%; /* Same as the width of the sidenav */
+  margin-top: 260;
+  margin-left: ; /* Same as the width of the sidenav */
   font-size: 12px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
