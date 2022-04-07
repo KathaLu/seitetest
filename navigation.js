@@ -64,20 +64,36 @@ for (let i = 0; i < groups.length; i++) {
     result = result.replace("</tspan>", "");
 
     //set anchor for searchFunction
-    //a.setAttribute("onclick", 'searchFunction( " ' + result + ' " )');
-    a.setAttribute("onclick", "searchFunction()");
+    a.setAttribute("onclick", 'searchFunction( " ' + result + ' " )');
+    //a.setAttribute("onclick", "searchFunction()");
 
-    //set anchor for searchAndHighlight
-    //a.setAttribute("onclick", 'searchFunction( " ' + result + ' " )');
+   
 
     dummyElement.innerHTML = a.outerHTML;
     var htmlAnchorElement = dummyElement.querySelector("a");
 
     htmlAnchorElement.innerHTML = group.innerHTML;
     group.innerHTML = dummyElement.innerHTML;
+    
+    function searchFunction(searchText) {
+  const element = document.getElementsByClassName(searchText);
+  if (element[0] !== undefined) {
+    //check if class name is found in HTML
+    if (count < element.length) {
+      element[count].scrollIntoView();
+      count++;
+      lastSearchedText = searchText;
+      console.log(lastSearchedText);
+    } else {
+      count = 0;
+      element[count].scrollIntoView();
+    }
+  } else {
+    alert('Kein Ergebnis gefunden!');
+  }
 
-    //var $currDiv = $("[id='start'][class='Oberthema 1']");
-    var $currDiv = $("#start");
+    var $currDiv = $("[id='start'][class=" ' + result + ' " ]);
+    //var $currDiv = $("#start");
     $currDiv.css("background-color", "#aa5099", "0.8");
     $currDiv[0].scrollIntoView();
     console.log($currDiv[0]);
