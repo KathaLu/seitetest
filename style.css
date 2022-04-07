@@ -4,9 +4,9 @@ body {
 }
 
 .svg {
-  size: 50%;
+  size: 80%;
   height: 350;
-  width: 80%;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
