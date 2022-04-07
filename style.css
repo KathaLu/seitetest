@@ -15,10 +15,6 @@ body {
   overflow-x: hidden;
   padding-top: 20px;
   
-  display:inline-block; 
-   vertical-align: middle;
-   padding-bottom: 50%;  // berechnet aus dem Seitenverhältnis height/width
-   overflow:hidden;
 }
 
 .svg a:hover {
