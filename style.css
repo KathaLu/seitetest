@@ -47,16 +47,16 @@ body {
 }
 
 .active {
-  fill: var(--primary-color);
+  fill: #DA8FA4;
 }
 
 .concept:hover rect {
-  stroke: #a3a1a3;
+  stroke: #DA8FA4;
   stroke-width: 5;
 }
 
 .highlight {
-  background-color: #a3a1a3;
+  background-color: #DA8FA4;
 }
 
 /*
