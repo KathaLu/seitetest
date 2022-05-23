@@ -43,7 +43,7 @@ body {
 }
 
 :root {
-  --primary-color: hsl(332, 61%, 78%);
+  --primary-color: #F2C9D1;
 }
 
 .active {
