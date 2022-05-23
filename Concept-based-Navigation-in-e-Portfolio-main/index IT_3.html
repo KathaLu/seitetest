@@ -1,0 +1,1875 @@
+<html lang="de">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>IT3 E-Portfolio</title>
+    
+  </head>
+<!-- Body Bereich -->     
+<body>
+  <div id="inhalt" class="inhalt">
+    <h1 class="sections Vorlesungen">Vorlesungen</h1>
+    <p class="sections Vorlesungen">Unter diesem Reiter finden Sie meine beiden Zusammenfassungen zu den Vorlesungen „Programmieren in einer objektorientierten Umgebung“ und „Fundamentale Ideen der Informatik„. Viel Spaß beim Durchstöbern!🙂</p>
+     
+      <h2 class="sections ProgrammierenineinerobjektorientiertenUmgebung">Programmieren in einer objektorientierten Umgebung</h2>
+      <p class="sections ProgrammierenineinerobjektorientiertenUmgebung"> <b>1. EINFÜHRUNG IN RUBY</b> <br> <br>
+Ruby wurde zwei Jahre lang von Yukihiro Matsumoto entwickelt, und im Jahr 1995 veröffentlicht. Bis dahin war Ruby eine vollkommen unbekannte Sprache. 2004 wurde das Webframework Ruby on Rails veröffentlicht, und Rubys Durchbruch erfolgte. Heute gehört Ruby zu den am meist verbreiteten Programmiersprachen der Welt.
+Ruby ist eine sogenannte interpretierte Skriptsprache. Das bedeutet, ein Ruby-Programm wird vom Ruby-Interpreter geöffnet, Zeile für Zeile gelesen und die Ruby-Anweisungen in Maschinensprache übersetzt. Um also ein Ruby-Programm ausführen zu können, muss auf dem Rechner ein entsprechender Interpreter installiert sein.
+Ruby ist außerdem eine objektorientierte Sprache, was heißt, dass jeder Wert ein Objekt ist, und jedes Objekt zu einer Klasse gehört.</p>
+      <br> 
+      <b> WARUM RUBY?</b> <br>
+Ruby ist eine freie Programmiersprache, das heißt also, dass diese kostenlos, frei zu benutzen, zu kopieren, zu verändern und zu verbreiten ist. Außerdem bietet Ruby einen guten Einstieg in die Programmierung, da es relativ einfach zu lernen ist. Die Befehle können dazu auch besser verstanden werden, da sie an der englischen Sprache orientiert sein. Dazu unterstützt Ruby die neuesten, wichtigen Programmiermethodiken: Objektorientierung, XP, und auch mehrere Programmierparadigmen. Ein weiterer sehr wichtiger Aspekt ist, dass Ruby der menschlichen Denkweise sehr ähnelt. <br> <br>
+<b> EXKURS </b> <br>
+ ASSEMBLER<br>
+→ für den Menschen lesbare Sprache <br>
+→ Umwandlung in Maschinensprache notwendig <br>
+→ zu umständlich und fehleranfällig <br> 
+      COMPILER<br>
+→ übersetzt das in Hochsprache formulierte Programm in Maschinensprache, das dann ausgeführt werden kann <br> 
+      INTERPRETER <br>
+→ analysiert das in Hochsprache formulierte Programm und aktiviert direkt die entsprechenden Maschinenbefehle <br> <br>
+      <b>ALGORITHMEN UND PROGRAMME</b> <br>
+Algorithmen sind genau definierte Handlungsvorschriften die zur Lösung eines Problems dienen. Ein dafür alltägliches Beispiel sind Kochrezepte, in welchem beschrieben wird, in welcher Reihenfolge Schritte zu erledigen sind.
+Programme sind konkrete Formen von Algorithmen. Diese bestehen aus mehreren Anweisungen, die dann vom Computer interpretiert, und in der Reihenfolge durchgeführt werden. <br> <br>
+      <b>ERSTE ANWEISUNGEN</b> <br> 
+Üblicherweise wird eine einfache Anweisung in eine Zeile geschrieben. Diese orientiere sich an der natürlichen, also englischen Sprache.<br>
+puts – es erfolgt eine Ausgabe mit Zeilenumbruch <br>
+print – es erfolgt eine Ausgabe ohne Zeilenumbruch <br>
+Raute (#) – hierbei handelt es sich um einen Kommentar; die Raute und alles das in der Zeile danach steht wird vom Ruby-Interpreter ignoriert <br>
+#=> – eine Raute mit einem darauffolgenden Pfeil zeigt an, welcher Wert bei dem Code herauskommen würde, wenn man ihn ausführen würde <br> <br>
+      <b>2. DATENTYPEN UND VARIABLEN </b> <br> <br>
+
+      <b> DATENTYPEN </b> <br>
+Daten, ihre Ausführung und Manipulation bilden die Basis von Computerprogrammen. In Ruby sind folgende, einfache und komplexe Datentypen vordefiniert: <br><br>
+
+      <b>EINFACHE DATENTYPEN</b> <br>
+
+Zahlen: …werden in Ruby meist wie im realen Leben eingesetzt; zum Rechnen, als Index, etc. Unterschieden wird zwischen ganzzahligen Werten (Integer wie 1; -1; 1000) und Fließkommazahlen (Float wie 1.2; 3.06; -6.66) <br>
+
+Zeichen: …ist ein einzelner Buchstabe, Ziffer, Leerzeichen oder sonstiges typografisches Symbol. <br>
+
+Zeichenketten (String): …eine Kette von Zeichen (Buchstaben, Zahlen etc.) umschlossen von einfachen oder doppelten Anführungszeichen <br>
+
+String-Interpolation – Besonderheit:Strings in doppelten Anführungszeichen können beliebige Ruby-Ausdrücke beinhalten. 
+
+Wenn der String erzeugt wird, wird der Ausdruck ausgewertet, in einen String konvertiert und anstelle des Ausdrucks selbst in die Zeichenkette eingefügt.
+
+Ausdrücke innerhalb eines Strings beginnen mit dem Raute-Zeichen (#) und werden von geschweiften Klammern ({ }) umschlossen:
+
+puts „1 + 2 = #{1+2}“ #=> 1 + 2 = 3
+
+Boolean / Boolsche Werte: …logische Aussage, kann wahr (true), falsch (false) oder leer (nil) sein
+
+In manchen Fällen ist eine Umwandlung der Datentypen notwendig. Ein Beispiel finden Sie in der ersten Übung zu diesem Kapitel. Hierfür gibt es folgende Befehle:<br><br>
+
+      <b>UMWANDLUNG DER DATENTYPEN</b> <br>
+      to_s – Umwandlung zu einem String
+      to_i – Umwandlung zu einem Integer
+      .to_f – Umwandlung zu einem Float <br> <br>
+
+      <b> VARIABLEN</b> <br>
+
+Variablen haben in Programmiersprachen eine wichtige Rolle. Sie erleichtern einem das Nutzen und Schreiben von Programmen. Wird einer Variable einmal ein Wert zugeordnet, kann dieser beliebig oft genutzt und aufgerufen werden.
+Variablen kann man sich wie ein Gefäß vorstellen, in dem ein Wert hinterlegt wird. Variablen können anhand von beliebigen Datentypen hinterlegt werden. Egal ob String, Boolean, oder einfach nur eine Zahl.
+Es wird weiter unterschieden zwischen lokalen und globalen Variablen.
+Lokale Variablen werden entweder durch einen Unterstrich oder einen Kleinbuchstaben zu Beginn der Variable gekennzeichnet. Sie gelten für die Methode, für die sie definiert werden. Wenn aber eine Methode bereits eine Variable verwendet, greift sie auf diese zurück, und erstellt keine neue.
+Globale Variablen werden mit einem $ gekennzeichnet. Diese sind immer und überall im Ruby Programm sichtbar. Es gibt auch globale Variablen, die keinen zugewiesenen Wert haben, besitzen dann automatisch den Wert nil. <br> <br>
+      <b> LITERALE UND AUSDRÜCKE</b> <br><br>
+
+      <b>LITERALE</b> <br>
+
+Um bestimmte Ausdrücke zu erzeugen, gibt es eine Art Kurzsyntax, die Literale. Einfach ausgedrückt sind Literale Abfolgen von Ziffern und Zahlen.
+‘ein String Literal’ <br> <br>
+      <b>AUSDRÜCKE</b><br>
+Ein Ausdruck ist ein Stück Code, der vom Ruby-Interpreter ausgewertet wird, um einen Wert zu erzeugen. Primärausdrücke sind die einfachsten möglichen Ausdrücke, die nicht aus einfacheren Ausdrücken zusammengesetzt sind. Dazu gehören Literale, Referenzen auf Variablen und Aufrufe von Methoden.
+Es können ebenfalls größere Ausdrücke erzeugt werden. Dies erfolgt indem man Primärausdrücke durch Operatoren kombiniert werden. <br> <br>
+      <b>3. ANWEISUNGEN UND FUNKTIONEN</b><br><br>
+
+      <b>OPERATOREN</b> <br>
+
+Ein Ausdruck wird üblicherweise aus Werten und Operatoren gebildet. Hierbei gibt es unter anderem die arithmetischen Operatoren, Zuweisungsoperatoren oder logischen Operatoren.<br> <br>
+      <b> FUNKTIONEN</b><br>
+Funktionen sind Codeblöcke, die einmal definiert werden und auf die dann beliebig oft zurückgegriffen werden kann. So lässt sich ein Programm besser strukturieren und der Code kompakt halten.
+Die zwei Schlüsselwörter für Definitionen sind def und end. Man beginnt mit “def”, woraufhin der Funktionsname und optionale ein oder mehrere Parameter in Klammern folgen.
+Im Funktionsrumpf befindet sich der Ruby-Code, der bei Aufruf der Funktion ausgeführt wird. Die Parameter werden hier wie normale Variablen verwendet. Das Ende wird dann mit “end” gekennzeichnet.
+Allgemein formuliert sieht dies dann so aus:
+def name (parameter)
+Funktionsrumpf
+…
+…
+end <br> <br>
+      <b>4. KONTROLLSTRUKTUREN</b> <br><br>
+
+Kontrollstrukturen dienen dazu den geradlinigen Programmfluss zu unterbrechen und an anderen Stellen zu verzweigen. Dies geschieht in Form von Fallentscheidungen oder Schleifen.<br><br>
+
+      <b>FALLENTSCHEIDUNGEN</b><br>
+
+Das wichtige bei Fallentscheidungen ist, dass sie immer mindestens eine, oder mehrere Bedingungen enthalten. Je nach dem ob die Bedingung erfüllt ist, oder nicht, wird ein bestimmtes Stück Code ausgeführt.<br>
+
+→ Es handelt sich hierbei also um Bool’sche Ausdrücke. Anweisungen werden dann ausgeführt, je nach dem, ob eine Bedingung true oder false ist.<br><br>
+
+      <b>SCHLEIFEN</b><br>
+Schleifen bewirken, dass ein Code-Stück wiederholt und somit mehrmals ausgeführt wird.<br><br>
+      
+      <b>  ITERATOREN</b> <br>
+
+Eine Alternative Wiederholungen zu erzeugen, wird durch Iteratoren geboten. Ein Iterator schreitet durch eine Liste von Elementen und arbeitet diese Element für Element ab. Unter anderem gibt es die numerischen Iteratoren times, upto und downto.
+Die Methode times ruft ihren zugehörigen Codeblock genau n-mal auf. (Sie geht also durch eine Liste aufeinanderfolgender Zahlen mit n Elementen beginnend bei 0. Dies kann so aussehen:
+3.times do
+print “haha!”
+end
+# => haha!haha!haha!
+Wird die Methode durch einen formalen Parameter erweitert, so zeigt dieser den Wert der aktuellen Iteration an und übergibt ihn dem Codeblock:
+3.times do |x|
+print x
+end
+# => 012
+Die Methode upto ruft ihren zugehörigen Block einmal für jeden Wert auf, der zwischen dem Integer, für den sie aufgerufen wird und dem Integer, der als Argument übergeben wird, liegt:
+3.upto(5) do |x|
+print x
+end
+# => 345
+Die Methode downto funktioniert im Prinzip wie upto, nur anders herum, das heißt sie iteriert von der größeren zur kleineren Zahl:
+5.downto(3) do |x|
+print x
+end
+# => 543
+Durch die Methode step kann eine veränderte Schrittweite angegeben werden. Sie wird wie upto für einen Startwert aufgerufen, als Argumente werden ebenfalls der Endwert und zusätzlich die Schrittweiter übergeben:
+3.step(5, 0.5) do |x|
+print x
+print “;”
+end
+# => 3.0;3.5;4.0;4.5;5.0 <br> <br>
+      
+     <b> CODEBLÖCKE </b><br>
+
+Die Verwendung von Blöcken ist eine der Grundlagen der Verwendung von Iteratoren. Der Code zwischen do und end wird als Codeblock oder anonyme Funktion bezeichnet.
+
+Ein Block kann nicht für sich allein stehen, sondern muss auf den Aufruf einer Methode folgen, der ihn ausführt, wie es z.B. bei Iterationen der Fall ist.
+
+Blöcke werden durch geschweifte Klammern oder die Schlüsselwörter do und end umschlossen.{} bzw. do müssen sich dabei in der gleichen Zeile befinden wie der Methodenaufruf.
+
+Der Rückgabewert eines Blocks ist, wie auch bei Funktionen, der Wert des letzten Ausdrucks, der in dem Block ausgewertet wurde.
+
+Für die Namensräume von Variablen gilt:<br>
+
+→ lokale Variablen, die innerhalb des Codeblocks erzeugt werden, sind außerhalb nicht verfügbar<br>
+
+→ existiert eine lokale Variable bereits außerhalb der Funktion, kann sie innerhalb verwendet werden, d.h. es wird keine neue Variable erzeugt<br> <br>
+
+         <b>5. ARRAYS UND HASHES</b> <br><br>
+
+         <b> ARRAYS</b><br>
+
+Ein Array ist eine Liste mit mehreren Elementen. Die Länge eines Arrays ist dynamisch, das heißt also, dass diese bei Bedarf mitwächst.
+Ein Array wird erzeugt, indem es mit einem Namen versehen wird, dem entweder [] oder Array.new zugewiesen wird:
+liste = [ ]
+liste = Array.new <br>
+→ in diesen beiden Fällen ist das Array zunächst leer<br>
+→ soll es mit einer bestimmten Länge erzeugt werden, wird beim Aufruf “Array.new” in <br>
+Klammern eine Zahl übergeben:<br>
+liste = Array.new(3)
+Einem Array können auch direkt bei der Erstellung konkrete Werte übergeben werden:
+liste = [1,4,5,6,8]
+liste = Array.new(3,”Hallo”)
+# => [“Hallo”, “Hallo”, “Hallo”] <br><br>
+
+         <b>ZUGRIFF</b><br>
+
+Der Zugriff auf einen bestimmten Wert im Array funktioniert über den Namen des Arrays und der Angabe der gewünschten Stelle (dem Index) in eckigen Klammern:
+liste = [2]
+# => [5]
+Es kann auch auf einen Teil, d.h. auf mehrere Werte im Array zugegriffen werden. Hierbei wird die erste und letzte Stelle im Array angegeben, auf deren Werte zugegriffen werden soll:
+liste = [2..4]
+# => [5,6,8] (also Zugriff auf die Werte an den Stellen 2 bis 4 im Array)
+Außerdem kann ein Wert innerhalb des Arrays ersetzt werden:
+liste[2] = 100
+# => [1,4,100,6,8]
+Bei negativen Indexzahlen erfolgt der Zugriff von hinten:
+liste[-1] = [1,4,5,6,8]
+# => [8] <br> <br>
+
+         <b>METHODEN</b><br>
+
+→ die Länge von Arrays ist dynamisch und kann dementsprechend verändert werden:<br>
+myArray.insert(stelle, wert)<br>
+→ fügt an der angegebenen Stelle ein neues Element ein und alle folgenden Elemente werden um eine Stelle nach hinten verschoben<br>
+Beispielsweise so:
+liste.insert(3, 10)
+# => [1, 4, 100, 10, 6, 8]
+myArray.delete(wert)
+→ ebenso können bestimmte Werte im Array gelöscht werden, was dann so aussieht:
+liste.delete(4)
+# => [1, 100, 10, 6, 8]<br>
+→ unter der Seite http://ruby-doc.org/core-2.5.0/Array.html findet man noch ganze viele andere Methoden, die man für Arrays anwenden kann!  <br> <br>   
+       
+         <b>  SORTIEREN</b><br>
+
+Eine häufig auftretende Aufgabe in der Programmierung ist das Sortieren von Elementen innerhalb des Arrays. Hierfür wird unter anderem das Bubble-Sort Prinzip verwendet. Das Prinzip dabei ist, immer zwei nebeneinander liegende Elemente zu vergleichen und ggf. zu vertauschen.
+Nebenstehend soll eine Reihe von Zahlen der Größe nach geordnet werden (Größtes nach rechts, Kleinstes nach links).
+Jeweils zwei nebeneinander liegende Zahlen werden verglichen und die größere der beiden nach rechts verschoben.
+Somit gelangt in einem Durchlauf die größte Zahl ganz nach rechts. Im nächsten die zweitgrößte Zahl an die zweite Stelle von rechts, usw.
+Um die Reihe also vollständig zu sortieren, werden n-1 Durchgänge benötigt.
+Um nun konkret Werte in einem Array zu sortieren, wird über die Indexzahl auf die einzelnen Werte zugegriffen und diese miteinander verglichen. Um alle Werte zu erfassen, erfolgt dies in einer Schleife. Das heißt bei ersten Schleifendurchlauf wird der Wert an der Stelle 0 mit dem Wert an Stelle 1 vergleichen. Im nächsten Durchlauf wird dann der Wert an Stelle 1 mit dem an Stelle 2 verglichen usw. Je nachdem, was ein Vergleich ergibt, werden die Werte an den Stellen vertauscht.<br> <br>
+      
+         <b>HASHES</b><br>
+
+Ein Hash ist, wie ein Array, eine Menge von Werten. Anders als im Array sind diese allerdings nicht geordnet, sondern werden über einen Schlüssel identifiziert. Das heißt für jeden Schlüssel ist ein bestimmer Wert hinterlegt:
+grauwerte = {“weiss”=>255, “hellgrau”=> 100, “schwarz”=> 0}
+Der Zugriff auf diese Werte erfolgt ebenfalls über den Schlüssel:
+grauwerte[“hellgrau”]
+# => 100 <br> <br>
+
+         <b>6. TEST-DRIVEN-DEVELOPMENT</b><br><br>
+
+Test-Driven-Development bezeichnet eine Methode des Programmentwurfs bei der ein Programm schrittweise, begleitet von kontinuierlichem Testen entwickelt wird.   
+         → d. h. ein Teil des Programms wird entworfen, dann getestet und verbessert bis es keine Fehler mehr gibt <br>
+→ dann wird das Programm erweitert, getestet, erweitert, getestet, und so weiter<br>
+→ so sollen Fehler möglichst früh erkannt und gelöst werden<br>
+Folgendes ist ein Beispiel dafür:
+Es soll eine neue Funktion erstellt werden, die testet, ob es sich bei einer Jahreszahl um ein Schaltjahr handelt.
+Es gilt:<br>
+– ist die Zahl durch 4 teilbar, ist das Jahr ein Schaltjahr<br>
+– ist die Zahl durch 4 und durch 100 teilbar, ist das Jahr kein Schaltjahr<br>
+– ist die Zahl durch 4, 100 und 400 teilbar, ist das Jahr ein Schaltjahr<br>
+Um die Funktion schrittweise zu entwickeln, wird nun zuerst ein Test erstellt:<br>
+def assert( expression )
+raise “Fehler!” unless expression
+end<br>
+Der Test gibt eine Fehlermeldung aus, wenn der Ausdruck, für den er durchgeführt wird, nicht wahr ist.<br>
+→ Nun geht es darum, das Programm schrittweise zu entwickeln und zwischendurch immer wieder zu testen.<br> <br>
+      
+      <b>7. OBJEKTORIENTIERUNG</b><br> <br>
+
+Ruby ist eine objektorientierte Programmiersprache. Dies bedeutet, dass in einem Ruby-Programm Ideen umgesetzt und damit gearbeitet werden kann, wie man es auch im realen Leben tun würde.
+So werden in einem Programm Klassen und Objekte erstellt, für die beliebige Eigenschaften und Beziehungen untereinander definiert werden können. Klassen sind sozusagen Vorlagen aus denen dann konkrete Objekte erzeugt werden. Innerhalb der Klasse können eine Reihe von Eigenschaften und Methoden definiert werden, die auf ein Objekt angewendet werden können.
+Zur Veranschaulichung, hier ein Beispiel:<br>
+→ es wird als erstes die Klasse “Cat” erstellt<br>
+class Cat
+attr_accessor :name, :age, :color
+end
+Der Name einer Klasse beginnt immer mit einem Großbuchstaben.
+atrr_accessor definiert Instanzvariablen, das heißt Variablen, durch die Objekte der Klasse identifiziert werden können.
+→ hier kann eine Instanz der Klasse Cat durch Name, Alter und Farbe identifiziert werden
+→ aus dieser Klasse können nun Objekte erzeugt werden:
+cat_instance = Cat.new
+Für das erzeugt Objekt können im nächsten Schritt Attribute definiert werden:
+cat_instance.name =”Max”
+cat_instance.age = 3
+cat_instance.color = “black”
+→ jetzt erzeuge ich eine neue Klasse Snake:
+class = Snake
+attr_accessor :name, :age, :color
+end
+! ein wichtiges Merkmal objektorientierter Sprachen ist die Vererbung → somit ist es möglich, für die Klassen “Cat” und “Snake” eine Superklasse “Pet” zu erzeugen → “Cat” und “Snake” bilden also die Subklassen von “Pet” und erben damit alle Eigenschaften, die für die Klasse “Pet” zur Verfügung stehen
+→ also wird die Klasse “Pet” zunächst definiert
+class Pet
+attr_accessor :name, :age, :color
+end
+→ jetzt werden die Subklassen definiert, dabei gibt “<Pet” die Vererbung der Klasse Pet an
+→ somit müssen Attribute, die für “Pet” gelten, für “Cat” und “Snake” nicht noch einmal definiert werden
+class Cat < Pet
+end
+class Snake < Pet
+end
+→ es können allerdings aber auch spezifische Eigenschaften für einzelne Klassen hinzugefügt werden
+class Snake < Pet
+attr_accessor :length
+end
+→ außerdem können bestimmte Methoden definiert werden, d. h. Anweisungen, die für Objekte der Klasse verwendet werden können
+class Dog < Pet
+def bark
+puts “Woof!”
+end
+end
+→ wird nun ein neuer Hund erstellt, kann für diesen die Methode “bark” aufgerufen werden
+a_dog = Dog.new
+a_dog.bark
+# => Woof!  <br><br>
+      
+      <b>8. SHOES UND RUBY</b> <br> <br>
+
+ Shoes ist ein GUI-Framework für Ruby. GUI steht für „graphical user interface“ und ist eine grafische Benutzeroberfläche, mit denen User in Programmen interagieren können. Framework bedeutet „Gerüst“ und man kann es als Vorprogrammierung verstehen. So sind in Shoes schon Funktionen und Elemente vorhanden und müssen nicht jedes Mal neu programmiert werden. Shoes kann auf verschiedene Weise verwendet und eingebunden werden. Shoes ermöglicht es also, für Ruby Programme eine graphische Benutzeroberfläche zu erstellen. Somit kann der Nutzer einfach mit einem Spiel/einer Webseite oder ähnlichem interagieren.
+Shoes.app do
+…
+…
+end
+bildet das Grundgerüst im Ruby Programm
+→ wird etwas nach dem “end” geschrieben, wird es zwar in Ruby ausgeführt, in Shoes aber nicht<br><br>
+
+      <b>ERSTE SHOES ANWENDUNG</b><br>
+
+→ Textausgaben über puts und print sind nicht mehr möglich, anstatt davon gibt es aber “para”
+→ para = kurz für Paragraph  <br><br>
+      
+      <b>9. FLOWS UND STACKS</b><br><br>
+
+Flows und Stacks sind Boxen, ähnlich wie “
+und” in HTML.
+Stacks kann man sich wie zusammengebundene Dominosteine vorstellen. Legt man mehr Dominosteine auf einen Stapel, so wird der Stapel einfach höher.
+Ein Flow dagegen ist eher wie eine Streichholzschachtel. Füllt man mehr Streichhölzer hinein quetschen sich die Hölzchen einfach zusammen, damit sie irgendwie in die Schachtel passen. Auch in einer Streichholzschachtel kann der untergeordnete Teil “höher” werden, aber davor ordnen sich die Streichhölzer nebeneinander an.
+→ Das Hauptfenster das mit “Shoes.app” geöffnet wird, ist ein Flow. Man kann auch für Flows und Stacks eine Höhe und Breite festgelegt werden. Ein Beispiel dafür könnte so aussehen:
+Shoes.app do
+stack width: 1.0, height: 1.0
+do
+background blue
+end
+end  <br><br>
+      
+      <b> 10. ZEICHNEN MIT SHOES</b><br><br>
+
+Das Shoes Fenster kann man sich als Koordinatensystem mit einer x- und einer y-Achse vorstellen.
+Dabei stellt die Ecke oben links den Nullpunkt dar.
+Mit dem Befehl “left” wird immer die x-Achse angesprochen. Umso höher der left-Wert umso weiter rechts befindet sich das Element.
+Mit “top” können die Elemente auf der y-Achse verschoben werden. Umso höher der top-Wert, desto tiefer rutscht das Element. <br><br>
+      <b> 11. INTERAKTION MIT DEM NUTZER EINBAUEN</b><br><br>
+
+      <b>BUTTONS</b><br>
+
+Eine der am häufigsten genutzten Interaktionen mit dem Nutzer ist ein Button:
+Shoes.app do
+button “Was macht Shoes?” do
+alert “alles farbig und beweglich”
+end
+end<br>
+→ “button” bedeutet: jetzt kommt ein Button<br>
+→ in den Hochkommata steht, was auf dem Button geschrieben sein soll<br>
+→ was zwischen dem do und dem end steht, ist das was passieren soll, wenn auf den Button geklickt wird<br> <br>
+      <b> 12. FAZIT</b><br><br>
+
+Programmieren war bis zu diesem Semester etwas ganz Unbekanntes für mich. Nie hätte ich gedacht, dass ich auch nur ansatzweise in Berührung damit kommen würde, und es überhaupt kapieren würde. Wo ich jetzt aber am Ende des Kurses angelangt bin, muss ich sagen, dass ich es eigentlich sogar sehr interessant fand. Ich hatte meine Höhen und Tiefen, die Erfolgserlebnisse wenn etwas funktioniert hat, waren immer sehr schön, aber ehrlich gesagt denke ich, dass die Frustration doch sehr hoch war. Oft haben Aufgaben nicht funktioniert, da sie im Ruby Kurs falsch dargestellt wurden, oder weil der Editor im Kurs nicht funktionierte. Dies fand ich echt schade, da ich deshalb oft schnell an mir selber gezweifelt habe, und dem Aufgeben immer sehr Nahe war. Zum Glück habe ich aber eine gewisse Menge an Ehrgeiz in mir, dass ich immer so lange an Aufgaben dran saß, bis ich sie endlich – mit oder ohne Hilfe von anderen – schaffen konnte.
+Das Prinzip vom Flipped Classroom hat mir persönlich nicht so zugesagt, da man, wenn man den Kurs einmal nicht rechtzeitig gemacht hat, nur sehr schwer mitgekommen ist. Dennoch haben mir die Präsenztermine immer etwas gebracht, da auch oft ältere Themen wiederholt wurden.
+Im Großen und Ganzen kann ich sagen, dass ich meine Ruby Programmierfähigkeiten als gut einstufen würde, was für mich persönlich als Neuling, eine tolle Erfahrung ist!<br><br>
+         
+      <h2 class="sections FundamentaleIdeenderInformatik">Fundamentale Ideen der Informatik</h2>
+      <p class="sections FundamentaleIdeenderInformatik"> <b>1. FUNDAMENTALE IDEEN UND BEGRIFFSERKLÄRUNG</b> <br><br>
+Fundamentale Ideen sind die grundlegenden Prinzipien, Denkweisen und Methoden der Informatik.
+Man unterscheidet hierbei verschiedene Kriterien.</p>
+Das Horizontalkriterium beschreibt, dass Fundamentale Ideen eine umfassende Anwendbarkeit in allen Bereichen besitzen, und eine Vielzahl von Phänomenen ordnen und integrieren.     
+Das Vertikalkriterium beschreibt, dass Fundamentale Ideen innerhalb eines Anwendungsbereiches auf jeder intellekturellen Ebene aufgezeigt werden. Die Unterschiede können dann in der Tiefe und Detaillierung ersichtlich werden. Ein Beispiel dafür ist, dass Mathematik sowohl in der Schule, als auch in Universitäten gelehrt wird, aber auf unterschiedlichen Niveaus.
+Das Zeitkriterium beschreibt, dass die Idee das Ergebnis einer lang andauernden Beobachtung einer Wissenschaft ist, und längerfristig relevant bleibt.
+Das Sinnkriterium beschreibt, dass die Idee im Bezug zur alltäglichen Sprache und Denken hat, und vortheoretisch unwissenschaftlich ist.<br><br>
+      
+      <b>Anwendungsbeispiel:</b><br>
+
+“Ist das Bedienen einer Tastatur eine fundamentale Idee?”
+Horizontal:
+Ja, da man diese in mehreren Anwendungsbereichen verwenden kann – bspw. im Internet, Spiele, Bearbeitungsprogramme, an unterschiedlichen Geräten, etc.
+Vertikal:
+Ja, weil es egal von wem genutzt werden kann
+Zeitkriterium:
+Nein, da es auch schon alternative Lösungen zu Tastaturen, wie Sprachsteuerung, gibt.
+Sinnkriterium:
+Ja, aber dies kann sich in den kommenden Jahren auch ändern. <br><br>
+
+      <b>EIN PROGRAMMABLAUF</b>
+...ist die Verfolgung der Instruktionen eines Programms.<br>
+→ jede Instruktion kann Speicher lesen, Nebeneffekte haben (Peripheriegeräte, Speicher schreiben) und den Lauf beeinflussen (bedingt oder wiederholte Teile)<br><br>
+   <b>INFORMATIONSPROZESSE</b><br>
+Informationen sollen modelliert werden können
+Mit Hilfe einer höheren Programmiersprache
+Frage: Wie werden diese Informationen repräsentiert und verarbeitet?
+Werden visualisiert
+Repräsentationen werden visuell dargestellt
+Abläufe werden als Animationen dargestellt <br><br>
+ 
+<b>CODE DEBUGGEN</b> <br> 
+Das Programm hat verschiedene Schnittstellen und Knoten
+Wenn in einem Knoten ein Fehler vorliegt, dann kann oft der Rest nicht ausgeführt werden
+ähnlich wie bei Stromkreis
+Jetzt muss man den Bug (engl. Käfer) ≈ Fehler finden
+Dies kann geschehen, indem man den Fehler visuell darstellt
+bei ruby: debug(„Hallo“)
+Diesen Debug stellt man dann an den Knotenpunkt, wo der Fehler vorliegen könnte und testet ob das Programm an dieser Stelle läuft oder nicht <br><br>     
+      
+      <b>2. VERSIONIERUNG</b><br><br>
+ → Versionierung ist ein System, das erlaubt, mehrere Versionen einer Datei oder eines Verzeichnisses zu synchronisieren und von verschiedenen Devices darauf zuzugreifen und es zu bearbeiten.<br>
+→ Versionierung ist ein System, das paralleles Arbeiten an einer Datei oder an einem Verzeichnis erlaubt<br>
+→ Versionierung ist ein System, das mehrere Versionen synchronisiert<br>
+→ Versionierung ist ein System, das einen Arbeitsfluss zwischen mehreren Leuten erlaubt<br>
+Beispiele hierfür sind: GoogleDocs, Moodle, etc.<br> <br> 
+
+      <b>WIESO BRAUCHT MAN VERSIONIERUNG?</b><br>
+Situation
+→ Person A erstellt ein Dokument (Version 1) und schickt das beschriebene Dokument an Person B weiter.<br>
+→ Person B möchte noch etwas abändern und fügt noch einige weitere Informationen hinzu (Version 1.1) und schickt es dann an Person C weiter<br>
+→ Auch Person C ändert einige Dinge ab (Version 1.2)<br>
+Problem<br>
+→ Person C muss die neuste Version (Version 1.2) jetzt an zwei verschiedene Personen weiterleiten<br>
+→ Person A und Person B wissen somit auch nicht, was Person C alles verändert hat<br>
+→ sehr schwieriges zusammenarbeiten<br>
+
+Lösung<br>
+→ Prinzip der Versionierung: Jede Person hat die aktuelle Version als Kopie und kann somit alle Änderungen der anderen personen mitverfolgen/sehen und somit direkt angezeigt bekommen, wer wann was verändert hat.<br><br>
+      
+
+      <b>VERSIONIERUNGSPROZESS </b><br>
+
+1. Basic Checkins<br>
+einfache Beiträge werden hinzugefügt
+eine Datei wird ständig verändert und gespeichert
+für alle partizipierenden Personen sichtbar/bearbeitbar   <br><br>
+
+      2. Checkout & Edit<br>
+eine andere Person macht eine lokale Kopie<br>
+Änderungen werden an der Arbeitskopie vorgenommen und dann wieder eingecheckt<br>
+er kann die Unterschiede berechnen (diffs) +Eggs +Soup<br>
+Konflikte können auftreten <br>  <br>   
+      
+3. Branching<br>
+unabhängige Arbeiten können auf unterschiedlichen Ästen (branches) stattfinden
+Im Server gibt es zwei unterschiedliche Reihen von Diffs  <br><br>
+    
+ 4. Merging<br>
+      zwei parallele Branches zusammen bringen (Äste werden wieder zusammengeführt) <br> <br>
+      
+      <b>VERTEILTE ODER ZENTRALE VERSIONIERUNG    </b><br> <br>
+Zentrale Versionierung<br>
+→ altes Vorgehen <br>
+→ alle Commits sind auf einem Repository<br>
+→ Konsistenz gesichert, aber Konflikte und Datenverlust<br>br>
+Vertikale Versionierung
+→ modernes Vorgehen<br>
+→ mehrere Repositories<br>
+→ jeder kann einen eigenen Server haben<br>
+→ Commits können erst auf lokalem Repository gemacht werden, erst später wird dann „gepullt“<br>
+→ Diffs (eigentlich Commits) sind Punkt-zu-Punkt vermittelt (Push, Pull)<br>
+→ wechselseitiger Zugriff auf Repositories<br>
+→ möglich: Firmeninterner Austausch, eigene Branches, parallele Entwicklungen mögich, vorherige Versionen können wiederhergestellt werden, aber Speicherplatzbedarf<br>
+Versionierung: eine fundamentale Idee?<br>
+Horizontal:<br>
+→ verschiedene Anwendungsfelder wie Grafik, Extranets, Entwicklung, Wikis…br>
+Vertikal:<br>
+→ Kinder malen zusammen mit Kreiden am Boden<br>
+→ Studenten arbeiten an einem Word Dokument<br>
+Zeit:<br>
+→ rcs und cvs seit den 90ern<br>
+→ GitHub als großer Betreiber der Entwicklung<br>
+GITHUB<br>
+Kooperieren mit GitHub <br>
+Git: Software zur Versionierungsverwaltung (von L Torvalds)
+Code kann ständig aktualisiert werden, den man bekommen hat
+man kann auch vorherige Versionen öffnen —> speichert jede Art von Veränderung
+Entwickler reichen Änderungen ein (durch Kommandozeile)
+GitHub stellt diese Änderungen ausführlich auf zugehörigen Webseite dar
+Alle Operationen durch das Git Programm
+→ Checkout, Commits, Push, Pull<br>
+
+GitHub als Webanzeige<br>
+→ und als Editierungswerkzeug, Freies Login<br>
+→ Freie Verwendung solange es Open-Source bleibt<br>
+Forken mit GitHub<br>
+Forken (Aufgabelung): Entwicklungszweig nach der Aufspaltung eines Projekts in zwei oder mehrere Folgeprojekte
+Jedes lesbare Repository (Ablage) kann geforkt werden<br>
+In der Praxis:<br>
+→ registrieren<br>
+→ Repo finden, Fork Knopf<br>
+→ Checkout, Veränderungen, Commit, Push<br>
+→ Pull Request<br><br>
+      <b>Pull Request </b><br>
+Feature, welches Entwickler nutzen, um die Zusammenarbeit zu erleichtern
+bieten eine benutzerfreundliche Weboberfläche, um Codeänderungen zu diskutieren, bevor sie ins offizielle Projekt integriert werden
+Mechanismus, mit dem Entwickler Teammitglieder über die Fertigstellung eines Features informieren kann
+Sobald sein Feature-Branch soweit ist, setzt er über seinen Bitbucket-Account ein Pull-Request ab → alle Beteiligten wissen dann, dass der Code reviewt und in den Master-Branch gemergt werden muss<br><br>
+ 
+      <b>3. BETRIEBSSYSTEME</b> <br><br>
+
+      <b>Operating System (OS)</b><br>
+Zusammenfassung von Computerprogrammen, welche die Systemressourcen eines Computers regeln
+Darunter zählen unter anderem Arbeitsspeicher, Festplatten und die Ein- und Ausgabegeräte (Tastatur, Bildschirm)
+Ein Betriebssystem verwaltet die genannten Punkte und stellt Anwendungsprogramme zur Verfügung
+Schnittstelle zwischen der Anwendungssoftware des Nutzers und der Hardware
+verfügen über graphische Benutzeroberfläche (graphical user interface → GUI)
+ist auf der Festplatte abgelegt <br> <br>    
+      
+      <b>WIE MACHT MAN EIN PROGRAMM LAUFFÄHIG?</b><br>
+
+Programmquellcode muss kompiliert werden
+→ Umwandlung von Programmcode in ausführbaren Code
+Laufumgebung (Compiler) interpretiert die Kompilierung
+notwendig: Quellcode und ein Compiler<br><br>
+      <b>IDEE EINER BIBLIOTHEK</b><br>
+Application Programming Interface
+Schnittstelle zur Anwendungsprogrammierung
+arbeitet auf Quelltextebene anders als die Binärschnittstellen (ABI)
+Verständigung zwischen 2 Softwareprodukten ohne Eingabe von dem Anwender.
+dient zur Anbindung an das Softwaresystem
+Zugriff auf Datenbanken oder Hardware wie Festplatte/Graphikkarte
+Ein Stück Programmcode, welches dazu dient, dass ein Programm automatisiert angesprochen werden kann<br><br>
+ 
+      <b>API ERKLÄRT</b><br>
+
+ https://www.youtube.com/watch?v=qW1qhb8r8xI<br><br>
+
+      <b>VON NEUMANN ARCHITEKTUR</b><br>
+Komponenten:<br>
+CPU<br>
+Rechenwerk (ALU = arithmetisch-logische Einheit)
+→ Das Rechenwerk führt arithmetische und vergleichende Operationen aus und sorgt für den Transport von Operanden in den und aus dem Hauptspeicher.
+Steuerwerk (CU = control unit)<br>
+→ Das Steuerwerk ermittelt zur Laufzeit die auszuführende Befehlsfolge und sorgt für deren Ausführung.<br>
+E/A-Werk<br>
+→ steuert die Ein- und Ausgabe von Daten<br>
+→ Tastatur, Bildschirm<br>
+Hauptspeicher
+→ besteht aus einer Folge von Speicherzellen, die sowohl Befehle als auch Operanden aufnehmen können<br>
+→ dient der Speicherung des aktuellen Programms, der Übernahme von Eingabedaten, der Übernahme von Daten aus einem externen Speicher und der vorübergehenden Speicherung von Zwischen- oder Endergebnissen.
+Bussystem<br>
+→ reduziert die Anzahl der „Wege“, die zur Kommunikation der verschiedenen Komponenten nötig sind, indem die Kommunikationen auf einem Datenweg zusammengeschlossen werden<br><br>
+      
+      <b>4. JAVA GRUNDLAGEN, KLASSEN UND OBJEKTE</b><br><br>
+
+      <b>WAS IST INTELLIJ IDEA?</b><br>
+→ eine integrierte Entwicklungsumgebung für die Programmiersprache Java<br>
+→ entwickelt von dem Unternehmen namens JetBrains<br><br>
+
+      <b>WAS IST JAVA?</b>br>
+→ eine Scriptsprache<br>
+→ eine objektorientierte Programmierung<br>
+Voraussetzungen:<br>
+→ Java-Entwicklungswerkzeug (JDK) → Erstellung von Java Programmen<br>
+→ Java-Laufteizumgebung (JRE)<br>
+virtuelle Maschine (JVM) und Bibliotheken → Ausführung von Java Programmen<br>
+Funktionsweise:<br>
+→ Quellcode in der Scriptsprache Java schreiben<br>
+→ Quellcode wird von Compiler in Bytecode umgewandelt (von Programmiersprache in Maschinensprache)<br>
+→ JVM (virtuelle Maschinen) werden eingesetzt → interpretiert den Bytecode und führt Programm aus<br>
+→ Je nach Betriebssystem, muss auch eine bestimmte virtuelle Maschine installiert sein, damit das Programm beliebig auf jedem Betriebssystem ausgeführt werden kann<br><br>
+
+ <b>KLASSEN </b><br>
+→ strukturiert die Programme <br>
+→ besteht aus Attributen und Methoden<br>
+→ Verallgemeinerung von Objekten<br>
+→ beschreibt, was für Attribute ein Objekt haben kann, weist ihr aber keinen Wert zu<br>
+→ genauere Beschreibung und Wertzuweisung gibt es erst beim Objekt<br><br>
+      <b>BEISPIEL</b><br>
+Mensch mit Eigenschaften wie Augenfarbe, Geschlecht, Größe und Funktionen wie Sprechen, jedoch weiß man noch nicht welche Werte diese Eigenschaften haben<br><br>
+
+      <b>OBJEKTE</b><br>
+→ genauere Beschreibung eines Dinges aus der Realität<br>
+→ bestimmte Attribute (Eigenschaften), mit einem bestimmten Wert (der jeweiligen Klasse)<br>
+→ sind nicht immer greifbare Dinge, sondern auch Datenstrukturen<br>
+→ jedes Objekt ist einer Klasse zugehörig<br>
+→ Klasse Mensch kann viele Objekte haben → 7,5 Milliarden Objekte insgesamt auf der Welt<br><br>
+
+      <b>BEISPIEL </b>
+
+Objekt = Amina Serdarevic
+Augenfarbe = graublau
+Haarfarbe = dunkelblond
+Größe = 1,75 m
+Geschlecht = weiblich
+Sprache = bosnisch<br><br>
+
+      <b>ATTRIBUTE</b><br>
+
+→ Eigenschaft eines Objekts einer Klasse<br>
+→ hat einen bestimmten Wert<br>
+→ Bsp. Geschlecht = weiblich<br><br>
+
+      <b>SUBKLASSEN</b><br>
+
+→ ist eine Klasse, deren Objekte zu einer anderen Klasse gehören<br>
+→ alle Klassen sind Subklassen von Objekten, sie haben:<br>
+→ eine toString Methode, um in der Konsole gedruckt zu werden<br>
+→ eine equals Methode, um mit anderen verglichen zu werden<br><br>
+
+      <b>METHODEN</b><br>
+
+→ werden mit einem Namen aufgerufen <br>
+→ kann einen Wert zurückgeben<br>
+→ um Variablen zu isolieren, um Wiederholungen zu vermeiden<br>
+→ Interaktionene, die man an einem Objekt durchführen kann (z.B. sprechen), nennt man Methoden<br>
+→ Funktionen und Verhaltensweisen<br>
+→ greift auf Eigenschaften eines Objekts zu<br>
+→ Attribute können verändert werden, Attributwerte können abgefragt werden<br>
+→ Eigenschaften können auch zwei Zustände haben (z.B. bei einem Lichtschalter an/aus)<br>
+→ durch Methoden kann abgefragt werden, ob eine bestimmte Eigenschaft zutrifft (true) oder nicht (false)<br>
+→ Methoden können:<br>
+– private sein und sind nur in der Klasse sichtbar<br>
+– protected sein und somit auch in den Subklassen und im Package sichtbar sein<br>
+– default sein und damit im Package sichtbar<br>
+– public sein und so von überall erreichbar<br><br>
+
+      <b>VARIABLEN</b><br>
+
+→ Behälter für einen veränderlichen Inhalt<br>
+→ Platzhalter für Daten<br>
+→ arithmetische Operationen (rechnen)<br>
+→ müssen immer sinnvoll benannt werden (Codelesbarkeit)<br><br>
+
+      <b>DATENTYPEN</b><br>
+→ bei jeder Deklaration einer Variable muss auch ihr Datentyp angegeben werden<br>
+→ variable wird erst deklariert anschließend wird ein Wert zurückgegeben<br>
+
+int = tee;
+tee = 250;Mit System.out.printIn(tee); kann die Variable ausgegeben werden
+Anzeige: 250 <br><br>
+
+      <b>5. SUCHMASCHINEN</b><br><br>
+Eine Suchmaschine ist ein Programm zur Recherche von Dokumenten, die in einem Computer oder einem Computernetzwerk wie z. B. dem World Wide Web gespeichert sind. Internet-Suchmaschinen haben ihren Ursprung in Information-Retrieval-Systemen. Sie erstellen einen Schlüsselwort-Index für die Dokumentbasis, um Suchanfragen über Schlüsselwörter mit einer nach Relevanz geordneten Trefferliste zu beantworten. Nach Eingabe eines Suchbegriffs liefert eine Suchmaschine eine Liste von Verweisen auf möglicherweise relevante Dokumente, meistens dargestellt mit Titel und einem kurzen Auszug des jeweiligen Dokuments. Dabei können verschiedene Suchverfahren Anwendung finden.<br><br>
+
+      <b>AUFGABEN</b><br>
+→ Erstellen und Pflege von Datenstrukturen mit Informationen über Dokumente<br>
+→ Verarbeiten von Suchanfragen<br>
+→ Aufbereitung der Ergebnisse (meist nach Relevanz sortiert) <br><br>
+      
+      
+      <b>  6. DATENSTRUKTUREN</b><br><br>
+Eine Datenstruktur ist ein Objekt zur Speicherung und Organisation von Daten. Es handelt sich um eine Struktur, weil die Daten in einer bestimmten Art und Weise angeordnet und verknüpft werden, um den Zugriff auf sie und ihre Verwaltung effizient zu ermöglichen.
+LINKED LIST <br>
+→ LinkedList (java.util.LinkedList), wird im Deutschen auch als Verkettete Liste bezeichnet<br>
+→ jedes Element hat einen Nachfolger links und einen rechts<br>
+→ Bei einer LinkedList stehen alle Listenelemente in Verbindung zum jeweiligen Vorgänger bzw. Nachfolger<br>
+→ Existiert kein Nachfolger, so verweist das letzte Element auf die null-Referenz.<br>
+→ Der Vorteil bei einer Verketteten Liste besteht darin, dass im Vergleich zu einer ArrayList die Elemente schneller hinzugefügt und gelöscht werden können → Verweise auf Nachbarn müssen geändert werden<br>
+→ Element der Liste an einer bestimmten Stelle auslesen → Zugriff langsamer, da Verbindungen bis zu passenden Element durchlaufen werden muss<br>
+→ Entscheidung für einen bestimmten Listen-Typ sollte von der Art und Anzahl der Zugriffe abhängig gemacht werden<br>
+
+Linked List is a data structure consisting of a group of vertices (nodes) which together represent a sequence. Under the simplest form, each vertex is composed of a data and a reference (link) to the next vertex in the sequence. Try clicking Search(77) for a sample animation on searching a value in a (Singly) Linked List.
+Linked List and its variations are used as underlying data structure to implement List, Stack, Queue, and Deque ADTs.<br><br>
+      
+      <b>7. PARALLELITÄT</b><br><br>
+
+→ wenn mehrere Prozesse in einem Netzwerk oder Core laufen<br>
+→ Beispiel: Steam und Spotify laufen gleichzeitig<br>
+Im Modell von Neumann gibt es keine Parallelität mit Prozessoren. Ein Schedule also ein Ausführungsplan ist für die vielen Durchführungen zuständig. Der Schedule gibt zudem noch an, in welcher Reihenfolge die Operationen stattfinden. Unteranderem gehören zu den Operationen Lese- und Schreiboperationen sowie Terminatorenoperationen. Desweiteren macht ein Schedule alle 50ms Unterbrechungen und fährt anschließend fort. Wir Nutzer merken dies nicht. Daher sind viele Betriebssysteme multitaskingfähig oder interleavingfähig. Interleaving ist eine Optimierungstechnik bei der Datenübertragung. Dort werden Daten in einer bestimmten Reihenfolge geordnet, um einen höheren Datensatz zu bekommen. <br><br>     
+    
+      <b>8. BENUTZERSCHNITTSTELLEN</b><br><br>
+
+Die Benutzerschnittstelle ist die Stelle oder Handlung, mit der ein Mensch mit einer Maschine in Kontakt tritt. Im einfachsten Fall ist das ein Lichtschalter: Er gehört weder zum Menschen, noch zur „Maschine“ (Lampe), sondern ist die Schnittstelle zwischen beiden.<br>
+→ auch Mensch-Maschine-Schnittstelle oder Human-Computer-Interaction genannt <br> <br>
+
+      <b>BESTANDTEILE</b><br>
+
+→ Zugang zu Programmen und Dateien wird als Icon (Bildsymbole) dargestellt<br>
+→ Programme öffnen ein Hauptfenster → GUI-System erlaubt, solche Fenster in ihrer Größe und Position zu verändern, auszublenden oder auf die gesamte Bildschirmgröße zu vergrößern<br>
+→ Weitere Bedienelemente: Schaltflächen (Buttons), Toolbars (Symbolleisten, Werkzeugleisten), Schieberegler, Auswahllisten und Symbole<br>
+→ Zusammengefasst werden alle diese Elemente zum WIMP-Modell (engl. W für Windows (Fenster), I für Icons (Datei- und Programmsymbole), M für Menu (Menü) und P für Pointer (Zeiger, der zum Beispiel durch die Maus bewegt wird))<br>
+→ Eine Palette als GUI-Element ist „nicht-modal“ und wird oft am Seitenrand angeordnet<br><br>      
+      
+      <b> 9. NETWORK</b> <br><br>
+
+      <b>NETZWERK</b><br>
+
+→ Zusammenschluss von verschiedenen technischen Systemen → ermöglicht Kommunikation der Systeme untereinander<br>
+→ Ziel: gemeinsame Nutzung von Ressourcen, wie bspw. Datenbanken, Drucker, Dateien oder Servern<br>
+→ die Kommunikation verläuft über verschiedene Protokolle<br><br>
+
+ <b>IDEE PACKET NETWORK </b><br>   
+→ ein Netzwerk aus verschiedenen Computern mit verschiedenen Adressen und Routern können miteinander kommunizieren<br>
+→ sie versenden sich gegenseitig verschiedene Datenpakete (Datenpaket ist eine Bezeichnung für in sich geschlossene Dateneinheiten)<br>
+→ sie besitzen einen Sender und einen Empfänger<br>
+→ das Meiste in einem Datenpaket besteht aus wichtigen Adressierungs- und
+Verwaltungsinformationen, welche von IP-basierten Netzwerken die mit Quelladressen gefüllt sind an den richtigen Computer liefern<br>
+→ Solche Informationen befinden sich in einem Header (Header sind die Zusatzinformationen, die Nutzerdaten am Anfang eines Datenblocks ergänzen)<br><br>
+
+      <b>SOCKETS</b><br>
+→ ein Socket ist ein Modul, welches als Kommunikationsendpunkt dient<br>
+→ Sockets werden verwendet, um Daten mit anderen Programmen auszutauschen<br>
+→ das Programm kann sich auf dem selben oder einem anderen Computer befinden<br>
+→ Sockets können Daten empfangen und versenden<br>
+→ sind dafür zuständig, dass Daten in der richtigen Reihenfolge versendet werden<br> <br>
+
+      <b>BUFFER</b><br>
+
+→ Speicher für die Zwischenlagerung von Daten<br>
+→ die Daten, welche als erste da sind, werden zuerst empfangen, die anderen befinden sich sozusagen in einer “Warteschlange”<br>
+→ es können immer wieder Daten hinzukommen, die sich aber so lange in der Warteschlange befinden, bis sie empfangen werden<br><br>
+
+      <b>10. VERSCHLÜSSELUNG</b><br><br>
+
+Die Verschlüsselung ist eine Möglichkeit, die Sicherheit von Daten zu erhöhen, indem der Inhalt einer Nachricht oder Datei so unkenntlich gemacht wird, dass sie nur von der Person gelesen werden kann, die über den passenden Verschlüsselungsschlüssel verfügt.  
+Die Grundidee der Verschlüsselung ist es, wie oben dargestellt wird, eine Nachricht von A nach B zu verschicken, ohne dass C die Nachricht sehen kann. So wie mit Postkarten, welche nicht „verschlüsselt“ sind und der „3.“ sie eventuell lesen kann, im Falle der Postkarte der Postbote. Durch Verschlüsselung wird dies verhindert. Um einen verschlüsselten Text zu lesen, muss man „nur“ den Schlüssel besitzen. Wenn man diesen hat, ist das Lösen der Verschlüsselung nicht mehr schwer. <br><br>     
+      
+      <b>  11. KOMPRIMIERUNG </b><br><br>
+
+Die Datenkompression – auch Datenkomprimierung genannt – ist ein Vorgang, bei dem die Menge digitaler Daten verdichtet oder reduziert wird. Dadurch sinkt der benötigte Speicherplatz und die Übertragungszeit der Daten verkürzt sich.
+Es werden zwei Arten von Komprimierung unterschieden, nämlich die verlustfreie und die verlustbehaftete Komprimierung.
+Die verlustfreie Komprimierung kann zurück in ihren Originalzustand gebracht werden, ist also reversibel.
+Die verlustbehaftete Komprimierung hingegen kann nicht in ihren Originalzustand gebracht werden, da Daten verloren gehen. <br><br>
+ <b>HUFFMAN CODIERUNG</b><br>
+Die Huffman-Kodierung ist eine Form der Entropiekodierung, die 1952 von David A. Huffman entwickelt wurde um eine verlustlose Kompression zu ermöglichen.
+Prinzip: Statt jedem Wort einen gleichlangen Code zuzuordnen, bekommen Zeichen, die häufig im Text vorkommen einen kürzeren Code als seltene Zeichen.
+Hilfsmittel: Codebäume, mit denen sich Codewörter grafisch als Baum darstellen lassen. Den Code eines Zeichen liest man aus dem Codebaum ab, indem man von unten (also der Wurzel des Baumes) bis zum gesuchten Zeichen am Ende des Baumes wandert und die dabei gefundenen Beschriftungen an den Verzweigungen notiert.<br><br>  
+   
+      <b> 12. MASCHINELLES LERNEN</b><br><br>
+
+ Maschinelles Lernen lässt sich als Teilgebiet der künstlichen Intelligenz betiteln. Hierbei wird Lernen als: „[…] ein Prozess [dargestellt], der zu einer Performanzsteigerung eines Systems führt.“
+Das System ist hierbei der Computer, oder der Mensch und die Performanzsteigerung stellt die Verhaltensänderung im Hinblick auf die Optimierung einer Bewertungsfunktion dar.
+Ein künstliches System lernt aus Beispielen und kann nach Beendigung der Lernphase verallgemeinern. Es lernt dabei nicht einfach Beispiele auswendig, sondern es erkennt Gesetzmäßigkeiten in den Lerndaten. So kann das System auch unbekannte Daten beurteilen.<br><br>
+
+      <b>INDUKTIVES LERNEN</b><br>
+= aus dem Speziellen, das Allgemeine lernen<br>
+→ die Idee ist die, dass man eine Funktion aus Beispielen lernen soll und mithilfe von gegebenen Fakten, Hypothesen aufstellt<br>
+Ablauf: Funktion finden ⇒ Funktion passt für möglichst viele Beispiele ⇒ Funktion wird verallgemeinert<br>
+
+      BEISPIEL:<br>
+Gegeben: Schwimmt (Forelle), Schwimmt (Karpfen)<br>
+Folgerung: Schwimmt (Fisch)<br>
+→ Vom Spezifischen auf das Allgemeine<br><br>
+
+      <b>LATENT SEMANTIC ANALYSIS</b><br>
+= Verfahren der automatischen Sprachverarbeitung<br>
+→ dient also dazu, um Ähnlichkeiten zwischen unterschiedlichen Ausdrücken zu errechnen<br>
+
+Ziel: die generellen Begriffe eines Dokumentes zu finden<br>
+Idee: Wörter, die häufig im Dokument vorkommen, haben eine latent ähnliche Bedeutungen<br><br>
+
+      <b>BEISPIEL:</b><br>
+→ aus sehr viele Daten (z.B. im Internet) sollen diejenigen gefunden werden, in denen das Wort Auto vorkommt<br>
+→ auch diejenigen, in denen es um das Thema Auto geht, aber der Name nicht explizit im Dokument genannt wird<br>
+→ kann Dokumente unterscheiden, in denen es wirklich um Autos geht und in denen nur das Wort Auto vorkommt (wie zum Beispiel Gewinnspiele)<br><br>
+
+      <b>FUNKTIONSWEISE:</b><br>
+→ Worterscheinung werden als Matrix gesammelt<br>
+→ in Spalten werden die Erscheinungsmengen der Wörter gesammelt<br>
+→ in den Reihen die Dokumente     <br><br>
+
+      <b>13. FAZIT</b> <br><br>
+
+Meine Erfahrungen mit dem Kurs Fundamentale Ideen der Informatik waren eher negativ, da meine Kohorte den Kurs aufgrund von Ausfällen nur sehr selten besuchen konnte. Außerdem haben wir auch kein Folien von Herrn Beer zur Verfügung gestellt bekommen, weshalb ich mit den Materialien von Herrn Libbrecht gearbeitet habe. Aufgrund von einer sprachlichen Barriere fiel es mir sehr schwer etwas zu verstehen, weshalb ich mich oft auf eigene Recherchen bezogen habe. Dadurch konnte ich das E-Portfolio dann aber vervollständigen und nachvollziehen.     
+      
+      <h1 class="sections Schwerpunkte">Schwerpunkte</h1>
+      <p class="sections Schwerpunkte">Unter diesem Reiter finden Sie meine beiden Schwerpunkte zu den Vorlesungen „Programmieren in einer objektorientierten Umgebung“ und „Fundamentale Ideen der Informatik„. Viel Spaß beim Durchstöbern! 🙂</p>
+      
+      <h2 class="sections ProgrammierenineinerobjektorientiertenUmgebung">Programmieren in einer objektorientierten Umgebung – Schwerpunkt</h2> 
+      <p class="sections ProgrammierenineinerobjektorientiertenUmgebung"> <b>HERO TROUBLE</b> <br><br>
+          <b> EINFÜHRUNG</b> <br><br>
+Ich habe zusammen mit meiner Gruppe, mit Sophia Pournaras, Stefan Maisch und Tim Reisenauer, das Spiel “Hero Trouble” entwickelt. Unser Spiel basiert auf dem bereits vorhandenem Spiel “Tank Trouble” (https://www.tanktrouble.com), in dem es darum geht den bzw die gegnerischen Panzer abzuschießen. Dabei befinden sich die einzelnen Panzer an verschiedenen Stellen in einem Labyrinth. Es ist möglich dieses Spiel alleine gegen einen Computer, zu zweit oder zu dritt zu spielen. </p>
+Bei unserem Spiel, “Hero Trouble”, handelt es sich um ein sehr ähnliches Konzept. Es ist als Zwei-Spieler-Spiel konzipiert, und es geht darum, dass Superman (Spieler 1) und Batman (Spieler 2) sich gegenseitig abschießen, bzw sich nicht abschießen lassen. Diese befinden sich auch in einem Labyrinth, welches Hindernisse beziehungsweise Begrenzungen darstellt.<br><br>    
+      <b>KONZEPTION</b><br><br>
+Nachdem wir uns auf eine Spielidee geeinigt haben, ging es für uns an die Arbeit. Zuerst begaben wir uns auf die Suche nach Spielfiguren. Schnell haben wir die Illustrationen von Batman und Superman (https://img.etsystatic.com/il/c6033d/1347625235/il_fullxfull.1347625235_o26v.jpg) gefunden und uns für diese entschieden. Daraufhin haben wir diese mit Photoshop zurecht geschnitten und uns dem Aufbau des Startfensters und des Labyrinths gewidmet. Diese Aufgaben haben wir aufgeteilt, zwei von uns entwickelten das Labyrinth und die anderen beiden schrieben den ersten Teil des Codes für das Startfenster. Auf den genauen Code werde ich unter dem Punkt “Umsetzung” zurückkommen.
+Um die Koordinaten leichter festlegen zu können, haben wir das Labyrinth direkt in einem Koordinatensystem gezeichnet. Die obere, linke Ecke lag dabei nicht im Nullpunkt, sondern bei (100/100). Nachdem wir die äußeren Linien festgelegt haben, haben wir nach und nach die im Labyrinth liegenden Linien definiert.<br>
+Dies bringt mich auch schon in die Phase der Umsetzung. <br> <br>
+
+      <b>UMSETZUNG </b><br><br>
+In dem Programmcode, den ich Ihnen in einer Dropbox zur Verfügung gestellt habe, steht schon sehr detailliert, wozu die einzelnen Elemente dienen, weshalb ich hier nur auf besondere Teile des Spielcodes eingehen werde.     
+Nach dem Programmkopf, in welchem wir allgemeine Daten, wie den Spielnamen festgelegt haben, haben wir dargestellt, dass wir eine externe Datei einbinden möchten. (Auf diese Datei werde ich später noch einmal zurückkommen).
+Als nächstes haben wir die Shoes App mit “Shoes.app do” gestartet und den Titel des Spiels und die nicht veränderbare Größe des Fensters bestimmt.
+Zunächst haben wir grundlegende Dinge für das Start- und Steuerungsfenster eingestellt. WIrd nun der Button “Play” betätigt, beginnt der Hauptteil des Programmcodes.
+Als erstes werden die Linien des Labyrinths, von denen ich vorher schon einmal gesprochen habe, aufgerufen.   
+Nun werden “Ovale”, die die Schusspatronen der Spieler darstellen, einmal festgelegt, damit sie beim ersten “remove” Befehl, entfernt werden. Dies dient dazu, dass wenn die Spieler später schießen möchten, die davor abgeschossene Schusspatrone entfernt (also removed) wird, sobald die nächste abgefeuert wurde.
+Damit die Schüsse später auch funktionieren, werden Sie nun in zwei Funktionen, eine für jeden Spieler, definiert. Innerhalb der Funktionen sind einige Kontrollstrukturen in einander verschachtelt, um jede mögliche Bedingung zu erfüllen. Ebenfalls wird hier definiert, dass Spieler 1 mit der Taste “Q” und Spieler 2 mit der Taste “M” schießt.      
+Danach, haben wir die Startpositionen und die Steuerung der beiden Spielfiguren festgelegt. Auch hier findet man eine Verkettung von mehreren Fallentscheidungen wieder.
+Mit einem keypress-Event, werden dann die zuvor festgelegten Kontrollstrukturen, welche, bzw ob eine Taste aufgerufen wird, überprüft.      
+Als letztes wird die zuvor genannte, ausgelagerte Funktion noch aufgerufen. In dieser Funktion, haben wir festgelegt, dass wenn Spieler 1 oder Spieler 2, die Linien des Labyrinths berühren, sie diese nicht durchdringen können und begrenzt werden. Außerdem werden sie immer wenn sie eine Linie berührt haben, ein Stück weiter in die Mitte des davor genutzten Weges gesetzt.
+Die Funktion haben wir deshalb ausgelagert, da sie sehr lang und daher unübersichtlich und unstrukturiert wirkt.  <br><br>    
+ 
+      <b>FAZIT</b><br><br>
+Zusammenfassend kann ich sagen, dass mir das Programmieren des Spiels mehr Freude als erwartet bereitet hat, da ich vor dieser Vorlesung noch nie in Kontakt mit irgendeiner Art von Programmieren gekommen bin.
+Es war stets interessant und für mich persönlich auch sehr verlockend, wenn etwas mal nicht funktioniert hat und wir nach der Lösung suchen mussten, damit alles perfekt läuft.
+Es hat mir sehr viel Freude bereitet dieses Spiel zu programmieren, und bin sehr stolz sagen zu können, dass dies unser Werk ist!
+      
+      <h2 class="sections FundamentaleIdeenderInformatik">Fundamentale Ideen der Informatik – Schwerpunkt</h2>
+      <p class="sections FundamentaleIdeenderInformatik"> <b>VERSCHLÜSSELUNG – ADVANCED ENCRYPTION STANDARD </b><br><br>
+          
+<b> EINFÜHRUNG VERSCHLÜSSELUNG: </b><br> <br>
+
+Unter Verschlüsselung versteht man Verfahren und Algorithmen, die Daten mittels digitaler bzw. elektronischer Codes oder Schlüssel inhaltlich in eine nicht lesbare Form umwandeln. Diesen Vorgang bezeichnet man als Verschlüsseln. Gleichzeitig wird dafür gesorgt, dass nur mit dem Wissen eines Schlüssels die geheimen Daten wieder entschlüsselt werden können.
+Anstatt von Verschlüsselung spricht man auch von Chiffrierung, was das gleiche meint.<br><br>
+          <b>EINFÜHRUNG ADVANCED ENCRYPTION STANDARD:</b><br>
+
+Der Advanced Encryption Standard (AES) ist eine Blockchiffre, die als Nachfolger für DES im Oktober 2000 vom National Institute of Standards and Technology (NIST) als Standard bekanntgegeben wurde. Nach seinen Entwicklern Joan Daemen und Vincent Rijmen wird AES auch Rijndael-Algorithmus genannt.
+Es handelt sich um ein symmetrisches Verschlüsselungsverfahren. Der Rijndael-Algorithmus besitzt variable, voneinander unabhängige Block- und Schlüssellängen von 128, 160, 192, 224 oder 256 Bit. Außerdem bietet dieser ein sehr hohes Maß an Sicherheit; → erst mehr als zehn Jahre nach seiner Standardisierung wurde der erste theoretisch interessante, praktisch aber nicht relevante Angriff gefunden.<br><br>
+          
+<b>ENTSTEHUNG ADVANCED ENCRYPTION STANDARD:</b><br>
+Im Januar 1997 schrieb das amerikanische Handelsministerium eine Suche nach einem Nachfolger des DES-Verfahrens aus, da dieses als Verschlüsselungsverfahren nicht mehr so gut funktionierte, da es auf eine Datengröße von 56 Bit beschränkt war. Es wurden folgende Rahmenbedingungen gegeben, die das zukünftige AES Verfahren erfüllen musste:<br>
+muss ein symmetrischer Algorithmus sein<br>
+muss 128 Bit lange Blöcke verwenden<br>
+muss Schlüssel von 128, 192 und 256 Bit Länge einsetzen können<br>
+soll gleichermaßen leicht in Hard- und Software zu implementierbar sein<br>
+soll eine überdurchschnittliche Leistung haben<br>
+soll allen bekannten Methoden der Kryptoanalyse widerstehen können, insbesondere Power- und Timing-Attacken<br>
+geringe Ressourcen Erforderlichkeit<br>
+frei von patentrechtlichen Ansprüchen sein und muss von jedermann unentgeltlich genutzt werden können<br>
+Neben Joan Daemen und Vincent Rijmen gab es noch Teilnehmer aus vielen weiteren Ländern, die ihre Ideen präsentiert haben. Auch Deutschland wurde durch die Deutsche Telekom mit der „Magenta“ als Idee vertreten. Aufgrund von massiver Sicherheits- und Leistungsprobleme wurde diese dann aber nicht ausgewählt.       
+In Bezug auf die drei Hauptkriterien, Kosten, Implementierung und Sicherheit, entschied sich die NIST (National Institute of Standards and Technology) für das Rijndael Verfahren.<br><br>
+
+          <b>ABLAUF:</b><br><br>
+Rijndael sind Blockchiffren auf Basis eines Substitutions-Permutations-Netzwerks (SPN). Das Verfahren wechselt bei jedem Schritt zwischen Substitution und Permutation, weshalb man AES auch als SP-Chiffre bezeichnet. Dabei erfolgt die Transformation des Klartextes in mehreren Runden gleichen Aufbaus. Der Klartext wird dabei nicht als Ganzes, sondern in Blöcken verarbeitet. Hierbei findet eine Konfusion statt, es wird also unter anderem die Beziehung zwischen Klar- und Geheimtext verwischt.
+Die Blocklänge unterscheidet sich zwischen Rijndael und AES etwas, bei Rijndael können die Block- und Schlüssellänge unabhängig voneinander die Werte 128, 160, 192, 224 oder 256 Bits haben. Bei AES wurde die Blocklänge auf 128 Bit und die Schlüsselgröße auf 128 (10 Runden), 192 (12 Runden) und 256 Bit (14 Runden), nach den Anforderungen von der NIST, festgelegt.
+Die AES-Entschlüsselung sieht notwendigerweise vor, dass dieselben Schritte wie bei der Verschlüsselung durchlaufen werden müssen, nur eben in umgekehrter Reihenfolge.
+Jeder Block wird zunächst in eine zweidimensionale Tabelle mit vier Zeilen geschrieben, dessen Zellen ein Byte groß sind. Die Anzahl der Spalten variiert je nach Blockgröße von 4 (128 Bit) bis 8 (256 Bit). Jeder Block wird nun nacheinander bestimmten Transformationen unterzogen. Aber anstatt jeden Block einmal mit dem Schlüssel zu Chiffrieren, wendet AES verschiedene Teile des Schlüssels nacheinander auf den Klartext-Block an. Die Anzahl dieser Runden (r) variiert und ist von Schlüssellänge (k) und Blockgröße (b) abhängig:<br><br>
+ 
+Der weitere Ablauf ist dann in folgende Schritte eingeteilt:<br>
+
+Schlüsselexpansion<br><br>
+Vorrunde<br>
+KeyAddition ()<br>
+Verschlüsselungsrunden (wiederhole solange runde<r)<br>
+Substitution()<br>
+ShiftRow()<br>
+MixColumn()<br>
+KeyAddition()<br>
+Schlussrunde<br>
+Substitution()<br>
+ShiftRow()<br>
+KeyAddition()<br>
+→ Die Schlussrunde zählt auch als Runde, also R = Anzahl Verschlüsselungsrunden + 1 Schlussrunde<br><br>
+
+<b>SCHLÜSSELEXPANSION</b><br><br>
+zunächst werden aus dem Schlüssel R + 1 Teilschlüssel, auch Rundenschlüssel genannt, erzeugt
+Die Rundenschlüssel müssen die gleiche Länge wie die Blöcke haben
+Mathematisch dargestellt heißt dies dann „b*(R+1)“ wobei b die Blocklänge angibt
+Der Schlüssel wird dann in eine zweidimensionale Tabelle mit vier Zeilen und Zellen, die jeweils 1 Byte groß sind, abgebildet
+Die ersten Spalten werden dann mit dem Benutzerschlüssel gefüllt
+Alle weiteren Spalten werden rekursiv berechnet:
+Um die Werte für die Zellen in der nächsten Spalte zu erhalten, werden die Spalten, welche je nach Blockgröße ein Vielfaches der vierten, sechsten oder achten Spalte sind, nach links rotiert [a0,a1,a2,a3] wird zu [a1,a2,a3,a0] und mit Hilfe der S-Box verschlüsselt
+Danach wird der „vorderste“ Wert der Spalte mit der rcon-Tabelle XOR verknüpft und abschließend die gesamte Spalte mit der um eine Schlüssellänge zurückliegenden Spalte XOR verknüpft
+Alle anderen Spalten werden aus einer XOR-Verknüpfung mit der Spalte eine Schlüssellänge vorher gebildet
+Eine Ausnahme bildet AES-256
+Hierbei wird jede 4. Spalte durch die S-Box ersetzt und dann mit der Spalte eine Schlüssellänge davor XOR-verknüpft <br> <br>          
+          
+          <b>ADDROUNDKEY</b><br><br>
+
+Die KeyAddition wird in der Vorrunde und am Ende jeder anderen Verschlüsselungsrunde ausgeführt
+Hier wird eine bitweise XOR-Verknüpfung zwischen dem Block und dem aktuellen Rundenschlüssel vorgenommen
+Dies ist die einzige Funktion in AES, die den Algorithmus vom Benutzerschlüssel abhängig macht<br> <br>
+ 
+
+          <b>SUBBYTES</b> <br><br>
+
+Im ersten Schritt jeder Runde wird für jedes Byte im Block ein Äquivalent in der S-Box gesucht
+so werden die Daten monoalphabetisch verschlüsselt<br><br>
+ 
+
+          <b>SHIFTROWS</b><br><br>
+
+In diesem Schritt werden die Zeilen um eine bestimmte Anzahl von Spalten nach links verschoben
+Überlaufende Zellen werden von rechts fortgesetzt
+Die Anzahl der Verschiebungen hängt von den Block und Zeilenlängen ab
+Die Zeile wird entweder um 1 bis 4 Spalten verschoben <br><br>        
+ 
+          <b>MIXCOLUMN</b><br><br>
+
+Nun werden die Spalten vermischt
+Es wird zunächst jede Zelle einer Spalte mit einer Konstanten multipliziert und anschließend die Ergebnisse XOR verknüpft
+Hinter dieser Vorgehensweise steckt ein komplizierter mathematischer Zusammenhang, den ich hier nicht näher erläutere<br><br>
+ 
+
+          <b>ENTSCHLÜSSELUNG</b><br><br>
+
+Hier wird rückwärts vorgegangen
+Die Daten werden zunächst wieder in zweidimensionale Tabellen gelesen
+Danach werden die Rundenschlüssel generiert
+Allerdings wird nun mit der Schlussrunde angefangen und alle Funktionen in jeder Runde in der umgekehrten Reihenfolge aufgerufen
+Durch die vielen XOR-Verknüpfungen unterscheiden sich die meisten Funktionen zum Entschlüsseln nicht von denen zum Verschlüsseln
+Es muss eine andere S-Box genutzt werden (die sich aus der original S-Box berechnen lässt) und die Zeilenverschiebungen erfolgen in die andere Richtung<br><br>
+ 
+
+          <b>ANWENDUNGSBEREICHE</b><br><br>
+
+AES findet einen sehr großen Anwendungsbereich, wie zum Beispiel für folgende Programme:<br>
+Verschlüsselungsstandard IEEE 802.11i für Wireless LAN<br>
+SRTP<br>
+Skype<br>
+Mac OS X als Standardverschlüsselungsmethode für Disk-Images<br>
+FileVault<br>
+Komprimierte Dateiarchive wie 7-ZIP oder RAR<br><br>
+ 
+
+          <b>KRITIK</b><br><br>
+
+Je nach verwendetem Schlüssel besteht nur eine Sicherheitsmarge von drei (bei 128 Bits Schlüssellänge) bis fünf Runden (bei 256 Bits Schlüssellänge)
+Einfache algebraische Beschreibung der S-Boxen, die ihrerseits die einzige nichtlineare Komponente der Chiffre sind
+Deshalb lässt sich der gesamte Algorithmus als Gleichungssystem beschreiben
+Durch den einfachen Key Schedule würden mit einem beliebigen Rundenschlüssel auch 128 Bit des Verfahrensschlüssels kompromittiert          
+          
+          
+          
+ </p>   
+      </div>
+    
+    
+    
+
+<!-- Cmap Bereich -->
+         
+<div id="cmap" class="svg">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1874px" height="866px" style="background-color:#ffffff;">
+    
+   
+    
+<!-- Connection Lines -->
+    
+   <g>
+        <path d="M324 574L375 594" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M385 436L325 485" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M824 836L782.6920782902604 836" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M772 836L782.6920782902604 830.5521140031254L782.6920782902604 836L782.6920782902604 841.4478859968746Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M89 593L113 604" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M762 611L682 750" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M183 715L197.34485473301882 716.1120712277516" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M208 717L196.8924324262199 721.5411389093385L197.34485473301882 716.1120712277516L197.79727703981774 710.6830035461645Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M235 578L233 798" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M782 611L834 790" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M634 720L679 723" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M754 799L768.3079217097396 800" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M779 800L768.3079217097396 805.4478859968746L768.3079217097396 800L768.3079217097396 794.5521140031254Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M588 502L725 565" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M383 642L359.6810498414357 640.4855022655198" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M349 640L359.92842560150524 635.0432355439899L359.6810498414357 640.4855022655198L359.4336740813661 645.9277689870497Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1392 433L1488.3079217097395 433" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M1499 433L1488.3079217097395 438.44788599687456L1488.3079217097395 433L1488.3079217097395 427.55211400312544Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M961 761L918 764" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M798 611L942 755" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M848 797L831.6920782902604 797" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M821 797L831.6920782902604 791.5521140031254L831.6920782902604 797L831.6920782902604 802.4478859968746Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M753 611L654 714" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M165 578L114 595" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M148 634L189 639" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M284 727L253 745" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M739 734L731.930897925663 723.8963468884945" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M726 715L736.4638130728814 720.8744034570154L731.930897925663 723.8963468884945L727.3979827784444 726.9182903199735Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M197 760L233 766" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M229 578L198 709" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M610 680L658 683" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M808 611L950 710" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M220 806L237.4017136824108 804.4131048423452" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M248 803L238.1217265623895 809.8132014421856L237.4017136824108 804.4131048423452L236.6817008024321 799.013008242505Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M459 436L559 488" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M267 781L237 786" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M774 611L767 793" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M240 578L271 727" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M181 679L213 682" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M768 611L736 720" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M785 611L849 753" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M232 578L211 755" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M854 608L955 634" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M361 694L342.69207829026044 694" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M332 694L342.69207829026044 688.5521140031254L342.69207829026044 694L342.69207829026044 699.4478859968746Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M248 578L337 729" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M254 578L343 687" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M864 760L846.6920782902604 760" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M836 760L846.6920782902604 754.5521140031254L846.6920782902604 760L846.6920782902604 765.4478859968746Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M214 578L167 629" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M995 677L965.6852658790622 678.6183833614621" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M955 679L965.4908224897765 673.1739684614655L965.6852658790622 678.6183833614621L965.8797092683477 684.0627982614586Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M737 611L635 674" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M271 578L360 634" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M237 578L254 776" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M828 611L970 672" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M972 718L950.6787381998627 716.5339369099931" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M940 716L950.9507926439285 711.0928480286748L950.6787381998627 716.5339369099931L950.4066837557967 721.9750257913115Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M568 627L597 656" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M340 574L299 567" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M227 578L196 673" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M948 235L1392 427" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M307 499L265 532" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M696 606L587 631" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M778 611L811 829" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M965 630L974 648" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M353 735L314 739" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M665 757L702.3122831532374 756.305363338479" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M713 756L702.4678735455351 761.7510270688948L702.3122831532374 756.305363338479L702.1566927609399 750.8596996080631Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M513 415L833 421" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M974 424L1274 430" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1366 456L1310 518" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1301 532L1304.2183572244455 524.5632855511088" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M1309 515L1309.091094593518 526.9996542356449L1304.2183572244455 524.5632855511088L1299.3456198553733 522.1269168665726Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1283 561L1240 627" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1222 630L1256 641" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1421 456L1531 531" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1528 535L1616 557" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1521 560L1471 630" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1478 636L1389 646" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1567 560L1661 631" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M1682 637L1644 640" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M805 235L417 403" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+    </g>
+    <g>
+        <path d="M417 415L382.31895387881144 395.24191155683144" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <path d="M373 390L384.98984122101604 390.4936673929122L382.31895387881144 395.24191155683144L379.64806653660685 399.9901557207507Z" stroke="none" fill="#000000" stroke-width="1.5" stroke-dasharray="none" />
+    </g>
+
+<!-- Linking Phrases -->
+    <g>
+        <g>
+            <text x="243px" y="788px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="90px" y="604px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="611px" y="686px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="666px" y="762px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="184px" y="721px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="563px" y="639px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="800px" y="841px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="937px" y="767px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="182px" y="685px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="956px" y="642px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="755px" y="805px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="337px" y="699px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="359px" y="646px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="840px" y="765px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="300px" y="574px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="722px" y="732px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="198px" y="767px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="149px" y="641px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="275px" y="497px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>Programmieren</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="221px" y="810px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="635px" y="726px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="948px" y="722px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="545px" y="500px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>Informatik</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="329px" y="741px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="260px" y="739px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="824px" y="802px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="1393px" y="438px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="971px" y="683px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="834px" y="427px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>Vorlesung</tspan><tspan fill="none">t</tspan><tspan>ergaenzt</tspan><tspan fill="none">t</tspan><tspan>durch</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="1292px" y="530px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="1223px" y="639px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="1529px" y="543px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="1454px" y="642px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="1658px" y="643px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <g>
+            <text x="393px" y="413px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="8pt" font-family="Verdana">
+                <tspan>????</tspan>
+            </text>
+        </g>
+    </g>
+
+<!-- Concepts -->
+    <g>
+        <mask id="mask:1649071597236.0.7060220401567112">
+            <rect x="256px" y="719px" rx="8" ry="8" width="54px" height="30px" fill="#ffffff" />
+            <rect x="252px" y="715px" rx="8" ry="8" width="54px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="256px" y="719px" rx="8" ry="8" width="54px" height="30px" fill="#323232" mask="url(#mask:1649071597236.0.7060220401567112)" />
+        <rect x="252px" y="715px" rx="8" ry="8" width="54px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="252px" y="715px" rx="8" ry="8" width="54px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="259px" y="736px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Shoes</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597233.0.9323745281036362">
+            <rect x="4px" y="617px" rx="8" ry="8" width="189px" height="30px" fill="#ffffff" />
+            <rect x="0px" y="613px" rx="8" ry="8" width="189px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="4px" y="617px" rx="8" ry="8" width="189px" height="30px" fill="#323232" mask="url(#mask:1649071597233.0.9323745281036362)" />
+        <rect x="0px" y="613px" rx="8" ry="8" width="189px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="0px" y="613px" rx="8" ry="8" width="189px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="7px" y="634px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Datentypen</tspan><tspan fill="none">t</tspan><tspan>und</tspan><tspan fill="none">t</tspan><tspan>Variablen</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597230.0.9047593841014989">
+            <rect x="700px" y="569px" rx="8" ry="8" width="158px" height="46px" fill="#ffffff" />
+            <rect x="696px" y="565px" rx="8" ry="8" width="158px" height="46px" fill="#000000" />
+        </mask>
+        <rect x="700px" y="569px" rx="8" ry="8" width="158px" height="46px" fill="#323232" mask="url(#mask:1649071597230.0.9047593841014989)" />
+        <rect x="696px" y="565px" rx="8" ry="8" width="158px" height="46px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="696px" y="565px" rx="8" ry="8" width="158px" height="46px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="703px" y="586px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Fundamentale</tspan><tspan fill="none">t</tspan><tspan>Ideen</tspan><tspan fill="none">t</tspan>
+            </text>
+            <text x="726px" y="602px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>der</tspan><tspan fill="none">t</tspan><tspan>Informatik</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597227.0.0809071400839878">
+            <rect x="501px" y="614px" rx="8" ry="8" width="153px" height="46px" fill="#ffffff" />
+            <rect x="497px" y="610px" rx="8" ry="8" width="153px" height="46px" fill="#000000" />
+        </mask>
+        <rect x="501px" y="614px" rx="8" ry="8" width="153px" height="46px" fill="#323232" mask="url(#mask:1649071597227.0.0809071400839878)" />
+        <rect x="497px" y="610px" rx="8" ry="8" width="153px" height="46px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="497px" y="610px" rx="8" ry="8" width="153px" height="46px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="537px" y="631px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Ideen</tspan><tspan fill="none">t</tspan><tspan>und</tspan><tspan fill="none">t</tspan>
+            </text>
+            <text x="504px" y="647px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Begriffserklaerungen</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597222.0.2818662632210438">
+            <rect x="241px" y="762px" rx="8" ry="8" width="139px" height="30px" fill="#ffffff" />
+            <rect x="237px" y="758px" rx="8" ry="8" width="139px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="241px" y="762px" rx="8" ry="8" width="139px" height="30px" fill="#323232" mask="url(#mask:1649071597222.0.2818662632210438)" />
+        <rect x="237px" y="758px" rx="8" ry="8" width="139px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="237px" y="758px" rx="8" ry="8" width="139px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="244px" y="779px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Objetkorientierung</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597219.0.7278569355267559">
+            <rect x="318px" y="394px" rx="8" ry="8" width="199px" height="46px" fill="#ffffff" />
+            <rect x="314px" y="390px" rx="8" ry="8" width="199px" height="46px" fill="#000000" />
+        </mask>
+        <rect x="318px" y="394px" rx="8" ry="8" width="199px" height="46px" fill="#323232" mask="url(#mask:1649071597219.0.7278569355267559)" />
+        <rect x="314px" y="390px" rx="8" ry="8" width="199px" height="46px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="314px" y="390px" rx="8" ry="8" width="199px" height="46px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="321px" y="425px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="20pt" font-family="Verdana">
+                <tspan fill="none">t</tspan><tspan>Vorlesungen</tspan><tspan fill="none">t</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597213.0.9907864610193431">
+            <rect x="959px" y="665px" rx="8" ry="8" width="148px" height="30px" fill="#ffffff" />
+            <rect x="955px" y="661px" rx="8" ry="8" width="148px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="959px" y="665px" rx="8" ry="8" width="148px" height="30px" fill="#323232" mask="url(#mask:1649071597213.0.9907864610193431)" />
+        <rect x="955px" y="661px" rx="8" ry="8" width="148px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="955px" y="661px" rx="8" ry="8" width="148px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="962px" y="682px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Maschinelles</tspan><tspan fill="none">t</tspan><tspan>Lernen</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597207.0.8852898228425155">
+            <rect x="593px" y="747px" rx="8" ry="8" width="124px" height="30px" fill="#ffffff" />
+            <rect x="589px" y="743px" rx="8" ry="8" width="124px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="593px" y="747px" rx="8" ry="8" width="124px" height="30px" fill="#323232" mask="url(#mask:1649071597207.0.8852898228425155)" />
+        <rect x="589px" y="743px" rx="8" ry="8" width="124px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="589px" y="743px" rx="8" ry="8" width="124px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="596px" y="764px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Suchmaschinen</tspan><tspan fill="none">t</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597202.0.7733789526892383">
+            <rect x="660px" y="787px" rx="8" ry="8" width="123px" height="30px" fill="#ffffff" />
+            <rect x="656px" y="783px" rx="8" ry="8" width="123px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="660px" y="787px" rx="8" ry="8" width="123px" height="30px" fill="#323232" mask="url(#mask:1649071597202.0.7733789526892383)" />
+        <rect x="656px" y="783px" rx="8" ry="8" width="123px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="656px" y="783px" rx="8" ry="8" width="123px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="663px" y="804px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Datenstrukturen</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597200.0.4305953505228499">
+            <rect x="556px" y="669px" rx="8" ry="8" width="106px" height="30px" fill="#ffffff" />
+            <rect x="552px" y="665px" rx="8" ry="8" width="106px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="556px" y="669px" rx="8" ry="8" width="106px" height="30px" fill="#323232" mask="url(#mask:1649071597200.0.4305953505228499)" />
+        <rect x="552px" y="665px" rx="8" ry="8" width="106px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="552px" y="665px" rx="8" ry="8" width="106px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="559px" y="686px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Versionierung</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597197.0.5083889222282387">
+            <rect x="757px" y="177px" rx="8" ry="8" width="248px" height="62px" fill="#ffffff" />
+            <rect x="753px" y="173px" rx="8" ry="8" width="248px" height="62px" fill="#000000" />
+        </mask>
+        <rect x="757px" y="177px" rx="8" ry="8" width="248px" height="62px" fill="#323232" mask="url(#mask:1649071597197.0.5083889222282387)" />
+        <rect x="753px" y="173px" rx="8" ry="8" width="248px" height="62px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="753px" y="173px" rx="8" ry="8" width="248px" height="62px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="775px" y="211px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="20pt" font-family="Verdana">
+                <tspan>IT</tspan><tspan fill="none">t</tspan><tspan>3</tspan><tspan fill="none">t</tspan><tspan>E-Portfolio</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597195.0.09580525014280972">
+            <rect x="1278px" y="414px" rx="8" ry="8" width="225px" height="46px" fill="#ffffff" />
+            <rect x="1274px" y="410px" rx="8" ry="8" width="225px" height="46px" fill="#000000" />
+        </mask>
+        <rect x="1278px" y="414px" rx="8" ry="8" width="225px" height="46px" fill="#323232" mask="url(#mask:1649071597195.0.09580525014280972)" />
+        <rect x="1274px" y="410px" rx="8" ry="8" width="225px" height="46px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="1274px" y="410px" rx="8" ry="8" width="225px" height="46px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="1281px" y="445px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="20pt" font-family="Verdana">
+                <tspan fill="none">t</tspan><tspan>Schwerpunkte</tspan><tspan fill="none">t</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597192.0.14591136711484132">
+            <rect x="4px" y="661px" rx="8" ry="8" width="213px" height="30px" fill="#ffffff" />
+            <rect x="0px" y="657px" rx="8" ry="8" width="213px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="4px" y="661px" rx="8" ry="8" width="213px" height="30px" fill="#323232" mask="url(#mask:1649071597192.0.14591136711484132)" />
+        <rect x="0px" y="657px" rx="8" ry="8" width="213px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="0px" y="657px" rx="8" ry="8" width="213px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="7px" y="678px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Anweisungen</tspan><tspan fill="none">t</tspan><tspan>und</tspan><tspan fill="none">t</tspan><tspan>Funktionen</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597189.0.32559845864688275">
+            <rect x="58px" y="803px" rx="8" ry="8" width="194px" height="30px" fill="#ffffff" />
+            <rect x="54px" y="799px" rx="8" ry="8" width="194px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="58px" y="803px" rx="8" ry="8" width="194px" height="30px" fill="#323232" mask="url(#mask:1649071597189.0.32559845864688275)" />
+        <rect x="54px" y="799px" rx="8" ry="8" width="194px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="54px" y="799px" rx="8" ry="8" width="194px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="61px" y="820px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Test-Driven-Developement</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597187.0.28899553008780554">
+            <rect x="776px" y="825px" rx="8" ry="8" width="92px" height="30px" fill="#ffffff" />
+            <rect x="772px" y="821px" rx="8" ry="8" width="92px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="776px" y="825px" rx="8" ry="8" width="92px" height="30px" fill="#323232" mask="url(#mask:1649071597187.0.28899553008780554)" />
+        <rect x="772px" y="821px" rx="8" ry="8" width="92px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="772px" y="821px" rx="8" ry="8" width="92px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="779px" y="842px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Parallelitaet</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597183.0.023091116439092563">
+            <rect x="944px" y="708px" rx="8" ry="8" width="116px" height="30px" fill="#ffffff" />
+            <rect x="940px" y="704px" rx="8" ry="8" width="116px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="944px" y="708px" rx="8" ry="8" width="116px" height="30px" fill="#323232" mask="url(#mask:1649071597183.0.023091116439092563)" />
+        <rect x="940px" y="704px" rx="8" ry="8" width="116px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="940px" y="704px" rx="8" ry="8" width="116px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="947px" y="725px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Komprimierung</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597181.0.7646537248637617">
+            <rect x="77px" y="701px" rx="8" ry="8" width="135px" height="30px" fill="#ffffff" />
+            <rect x="73px" y="697px" rx="8" ry="8" width="135px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="77px" y="701px" rx="8" ry="8" width="135px" height="30px" fill="#323232" mask="url(#mask:1649071597181.0.7646537248637617)" />
+        <rect x="73px" y="697px" rx="8" ry="8" width="135px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="73px" y="697px" rx="8" ry="8" width="135px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="80px" y="718px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Kontrollstrukturen</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597179.0.6378004419997219">
+            <rect x="133px" y="536px" rx="8" ry="8" width="211px" height="46px" fill="#ffffff" />
+            <rect x="129px" y="532px" rx="8" ry="8" width="211px" height="46px" fill="#000000" />
+        </mask>
+        <rect x="133px" y="536px" rx="8" ry="8" width="211px" height="46px" fill="#323232" mask="url(#mask:1649071597179.0.6378004419997219)" />
+        <rect x="129px" y="532px" rx="8" ry="8" width="211px" height="46px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="129px" y="532px" rx="8" ry="8" width="211px" height="46px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="155px" y="553px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Programmieren</tspan><tspan fill="none">t</tspan><tspan>in</tspan><tspan fill="none">t</tspan><tspan>einer</tspan>
+            </text>
+            <text x="136px" y="569px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>objektorientierten</tspan><tspan fill="none">t</tspan><tspan>Umgebung</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597176.0.6640487134396316">
+            <rect x="922px" y="749px" rx="8" ry="8" width="129px" height="30px" fill="#ffffff" />
+            <rect x="918px" y="745px" rx="8" ry="8" width="129px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="922px" y="749px" rx="8" ry="8" width="129px" height="30px" fill="#323232" mask="url(#mask:1649071597176.0.6640487134396316)" />
+        <rect x="918px" y="745px" rx="8" ry="8" width="129px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="918px" y="745px" rx="8" ry="8" width="129px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="925px" y="766px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Verschluesselung</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597173.0.8845777675079542">
+            <rect x="318px" y="721px" rx="8" ry="8" width="131px" height="30px" fill="#ffffff" />
+            <rect x="314px" y="717px" rx="8" ry="8" width="131px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="318px" y="721px" rx="8" ry="8" width="131px" height="30px" fill="#323232" mask="url(#mask:1649071597173.0.8845777675079542)" />
+        <rect x="314px" y="717px" rx="8" ry="8" width="131px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="314px" y="717px" rx="8" ry="8" width="131px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="321px" y="738px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Flows</tspan><tspan fill="none">t</tspan><tspan>und</tspan><tspan fill="none">t</tspan><tspan>Stacks</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597170.0.07006714907935918">
+            <rect x="336px" y="682px" rx="8" ry="8" width="147px" height="30px" fill="#ffffff" />
+            <rect x="332px" y="678px" rx="8" ry="8" width="147px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="336px" y="682px" rx="8" ry="8" width="147px" height="30px" fill="#323232" mask="url(#mask:1649071597170.0.07006714907935918)" />
+        <rect x="332px" y="678px" rx="8" ry="8" width="147px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="332px" y="678px" rx="8" ry="8" width="147px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="339px" y="699px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Zeichnen</tspan><tspan fill="none">t</tspan><tspan>mit</tspan><tspan fill="none">t</tspan><tspan>Shoes</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597167.0.4373230241315589">
+            <rect x="825px" y="787px" rx="8" ry="8" width="162px" height="30px" fill="#ffffff" />
+            <rect x="821px" y="783px" rx="8" ry="8" width="162px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="825px" y="787px" rx="8" ry="8" width="162px" height="30px" fill="#323232" mask="url(#mask:1649071597167.0.4373230241315589)" />
+        <rect x="821px" y="783px" rx="8" ry="8" width="162px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="821px" y="783px" rx="8" ry="8" width="162px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="828px" y="804px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Benutzerschnittstellen</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597164.0.808082587137904">
+            <rect x="840px" y="749px" rx="8" ry="8" width="70px" height="30px" fill="#ffffff" />
+            <rect x="836px" y="745px" rx="8" ry="8" width="70px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="840px" y="749px" rx="8" ry="8" width="70px" height="30px" fill="#323232" mask="url(#mask:1649071597164.0.808082587137904)" />
+        <rect x="836px" y="745px" rx="8" ry="8" width="70px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="836px" y="745px" rx="8" ry="8" width="70px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="843px" y="766px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Network</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597162.0.9282895489928977">
+            <rect x="95px" y="743px" rx="8" ry="8" width="142px" height="30px" fill="#ffffff" />
+            <rect x="91px" y="739px" rx="8" ry="8" width="142px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="95px" y="743px" rx="8" ry="8" width="142px" height="30px" fill="#323232" mask="url(#mask:1649071597162.0.9282895489928977)" />
+        <rect x="91px" y="739px" rx="8" ry="8" width="142px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="91px" y="739px" rx="8" ry="8" width="142px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="98px" y="760px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Arrays</tspan><tspan fill="none">t</tspan><tspan>und</tspan><tspan fill="none">t</tspan><tspan>Hashes</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597158.0.6615442640296791">
+            <rect x="559px" y="708px" rx="8" ry="8" width="124px" height="30px" fill="#ffffff" />
+            <rect x="555px" y="704px" rx="8" ry="8" width="124px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="559px" y="708px" rx="8" ry="8" width="124px" height="30px" fill="#323232" mask="url(#mask:1649071597158.0.6615442640296791)" />
+        <rect x="555px" y="704px" rx="8" ry="8" width="124px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="555px" y="704px" rx="8" ry="8" width="124px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="562px" y="725px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Betriebssysteme</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597154.0.2522427951936519">
+            <rect x="353px" y="631px" rx="8" ry="8" width="88px" height="30px" fill="#ffffff" />
+            <rect x="349px" y="627px" rx="8" ry="8" width="88px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="353px" y="631px" rx="8" ry="8" width="88px" height="30px" fill="#323232" mask="url(#mask:1649071597154.0.2522427951936519)" />
+        <rect x="349px" y="627px" rx="8" ry="8" width="88px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="349px" y="627px" rx="8" ry="8" width="88px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="356px" y="648px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Interaktion</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597151.0.6432014516526936">
+            <rect x="37px" y="578px" rx="8" ry="8" width="94px" height="30px" fill="#ffffff" />
+            <rect x="33px" y="574px" rx="8" ry="8" width="94px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="37px" y="578px" rx="8" ry="8" width="94px" height="30px" fill="#323232" mask="url(#mask:1649071597151.0.6432014516526936)" />
+        <rect x="33px" y="574px" rx="8" ry="8" width="94px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="33px" y="574px" rx="8" ry="8" width="94px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="40px" y="595px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Einfuehrung</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597148.0.022635792400860666">
+            <rect x="947px" y="622px" rx="8" ry="8" width="45px" height="30px" fill="#ffffff" />
+            <rect x="943px" y="618px" rx="8" ry="8" width="45px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="947px" y="622px" rx="8" ry="8" width="45px" height="30px" fill="#323232" mask="url(#mask:1649071597148.0.022635792400860666)" />
+        <rect x="943px" y="618px" rx="8" ry="8" width="45px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="943px" y="618px" rx="8" ry="8" width="45px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="950px" y="639px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Fazit</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597145.0.3495810575313132">
+            <rect x="718px" y="719px" rx="8" ry="8" width="43px" height="30px" fill="#ffffff" />
+            <rect x="714px" y="715px" rx="8" ry="8" width="43px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="718px" y="719px" rx="8" ry="8" width="43px" height="30px" fill="#323232" mask="url(#mask:1649071597145.0.3495810575313132)" />
+        <rect x="714px" y="715px" rx="8" ry="8" width="43px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="714px" y="715px" rx="8" ry="8" width="43px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="721px" y="736px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Java</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597142.0.5603662039741963">
+            <rect x="379px" y="592px" rx="8" ry="8" width="45px" height="30px" fill="#ffffff" />
+            <rect x="375px" y="588px" rx="8" ry="8" width="45px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="379px" y="592px" rx="8" ry="8" width="45px" height="30px" fill="#323232" mask="url(#mask:1649071597142.0.5603662039741963)" />
+        <rect x="375px" y="588px" rx="8" ry="8" width="45px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="375px" y="588px" rx="8" ry="8" width="45px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="382px" y="609px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Fazit</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597139.0.6076094886371683">
+            <rect x="1462px" y="518px" rx="8" ry="8" width="158px" height="46px" fill="#ffffff" />
+            <rect x="1458px" y="514px" rx="8" ry="8" width="158px" height="46px" fill="#000000" />
+        </mask>
+        <rect x="1462px" y="518px" rx="8" ry="8" width="158px" height="46px" fill="#323232" mask="url(#mask:1649071597139.0.6076094886371683)" />
+        <rect x="1458px" y="514px" rx="8" ry="8" width="158px" height="46px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="1458px" y="514px" rx="8" ry="8" width="158px" height="46px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="1465px" y="535px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Fundamentale</tspan><tspan fill="none">t</tspan><tspan>Ideen</tspan><tspan fill="none">t</tspan>
+            </text>
+            <text x="1488px" y="551px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>der</tspan><tspan fill="none">t</tspan><tspan>Informatik</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597135.0.8022990403712777">
+            <rect x="1196px" y="519px" rx="8" ry="8" width="211px" height="46px" fill="#ffffff" />
+            <rect x="1192px" y="515px" rx="8" ry="8" width="211px" height="46px" fill="#000000" />
+        </mask>
+        <rect x="1196px" y="519px" rx="8" ry="8" width="211px" height="46px" fill="#323232" mask="url(#mask:1649071597135.0.8022990403712777)" />
+        <rect x="1192px" y="515px" rx="8" ry="8" width="211px" height="46px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="1192px" y="515px" rx="8" ry="8" width="211px" height="46px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="1215px" y="536px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Programmieren</tspan><tspan fill="none">t</tspan><tspan>in</tspan><tspan fill="none">t</tspan><tspan>einer</tspan><tspan fill="none">t</tspan>
+            </text>
+            <text x="1199px" y="552px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>objektorientierten</tspan><tspan fill="none">t</tspan><tspan>Umgebung</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597132.0.44235393739490303">
+            <rect x="1165px" y="615px" rx="8" ry="8" width="100px" height="30px" fill="#ffffff" />
+            <rect x="1161px" y="611px" rx="8" ry="8" width="100px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="1165px" y="615px" rx="8" ry="8" width="100px" height="30px" fill="#323232" mask="url(#mask:1649071597132.0.44235393739490303)" />
+        <rect x="1161px" y="611px" rx="8" ry="8" width="100px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="1161px" y="611px" rx="8" ry="8" width="100px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="1168px" y="632px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Hero</tspan><tspan fill="none">t</tspan><tspan>Trouble</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597126.0.4670073286070455">
+            <rect x="1393px" y="622px" rx="8" ry="8" width="222px" height="30px" fill="#ffffff" />
+            <rect x="1389px" y="618px" rx="8" ry="8" width="222px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="1393px" y="622px" rx="8" ry="8" width="222px" height="30px" fill="#323232" mask="url(#mask:1649071597126.0.4670073286070455)" />
+        <rect x="1389px" y="618px" rx="8" ry="8" width="222px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="1389px" y="618px" rx="8" ry="8" width="222px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="1396px" y="639px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Advanced</tspan><tspan fill="none">t</tspan><tspan>Encryption</tspan><tspan fill="none">t</tspan><tspan>Standard</tspan>
+            </text>
+        </g>
+    </g>
+    <g>
+        <mask id="mask:1649071597121.0.6727982678785351">
+            <rect x="1648px" y="622px" rx="8" ry="8" width="215px" height="30px" fill="#ffffff" />
+            <rect x="1644px" y="618px" rx="8" ry="8" width="215px" height="30px" fill="#000000" />
+        </mask>
+        <rect x="1648px" y="622px" rx="8" ry="8" width="215px" height="30px" fill="#323232" mask="url(#mask:1649071597121.0.6727982678785351)" />
+        <rect x="1644px" y="618px" rx="8" ry="8" width="215px" height="30px" stroke="none" fill="#ffffff" stroke-width="0" />
+        <rect x="1644px" y="618px" rx="8" ry="8" width="215px" height="30px" stroke="#000000" fill="none" stroke-width="1" stroke-dasharray="none" />
+        <g>
+            <text x="1651px" y="639px" stroke="none" fill="#000000" stroke-width="1" stroke-dasharray="none" alignment-baseline="auto" text-anchor="start" text-decoration="normal" font-weight="normal" font-style="normal" font-size="10pt" font-family="Verdana">
+                <tspan>Einfuehrung</tspan><tspan fill="none">t</tspan><tspan>Verschluesselung</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

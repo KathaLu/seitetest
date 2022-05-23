@@ -1,0 +1,66 @@
+body {
+  font-family: 'Lato', sans-serif;
+  text-align: justify;
+}
+
+.cmap {
+  height: 100%;
+  width: 58%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -8%;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.cmap button {
+  padding: 6px 6px 6px 6px;
+  position: relative;
+  top: -250px;
+  left: 450px;
+}
+
+.svg a:hover {
+  color: #f1f1f1;
+}
+
+.inhalt {
+  margin-left: 50%; /* Same as the width of the sidenav */
+  font-size: 12px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* size of the screen for responsive design --> we need to change this! Cmap at the top or on the left side for which screen size? */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+:root {
+  --primary-color: hsl(332, 61%, 78%);
+}
+
+.active {
+  fill: var(--primary-color);
+}
+
+.concept:hover rect {
+  stroke: #a3a1a3;
+  stroke-width: 5;
+}
+
+.highlight {
+  background-color: #a3a1a3;
+}
+
+/*
+.concept:hover rect {
+  fill: #fff09b;
+}
+*/
